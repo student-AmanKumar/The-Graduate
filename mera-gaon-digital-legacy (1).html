@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mera Gaon — Digital Legacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================
+   MERA GAON — DIGITAL LEGACY SECTION
+   Single-file HTML / CSS / JS
+   Theme: Ivory + Champagne Gold
+===================================================== */
+.mgl-legacy {
+  --mgl-cream:#f8f4eb;
+  --mgl-gold:#734425;
+  --mgl-light-gold:#734425;
+  --mgl-ink:#493c2e;
+  --mgl-muted: #8a826e;;
+      font-weight: 600;
+
+  width:100%;
+  max-width:100%;
+  position:relative;
+  padding:58px 7%;
+  color:var(--mgl-ink);
+  font-family:"Manrope",sans-serif;
+  background:transparent;
+  overflow:hidden;
+  isolation:isolate;
+}
+.mgl-legacy *,.mgl-legacy *::before,.mgl-legacy *::after{box-sizing:border-box}
+.mgl-legacy [hidden]{display:none!important}
+.mgl-legacy img{display:block;width:100%;height:100%;object-fit:cover}
+.mgl-legacy button{font:inherit}
+.mgl-legacy p{margin:0 0 15px}
+.mgl-legacy [data-hi]{font-family:"Noto Serif Devanagari",serif;letter-spacing:0}
+.mgl-top{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  gap:15px;margin-bottom:38px;position:relative;z-index:5
+}
+.mgl-top-label{grid-column:1;justify-self:start}
+.mgl-eyebrow,.mgl-small-label{
+  display:inline-block;color:var(--mgl-gold);font-size:10px;font-weight:800;
+  letter-spacing:2.8px;line-height:1.9;text-transform:uppercase
+}
+.mgl-language{
+  grid-column:2;justify-self:center;display:flex;align-items:center;
+  justify-content:center;gap:10px;white-space:nowrap;color:var(--mgl-muted);
+  font-size:12px
+}
+.mgl-lang-btn{
+  border:0;background:transparent;color:var(--mgl-muted);padding:7px 9px;
+  cursor:pointer;font-size:12px;transition:color .25s ease,transform .25s ease
+}
+.mgl-lang-btn:hover{color:var(--mgl-gold);transform:translateY(-2px)}
+.mgl-lang-btn.active{color:var(--mgl-gold);font-weight:800}
+.mgl-opening{
+  min-height:345px;display:grid;grid-template-columns:1.05fr .95fr;
+  align-items:center;gap:35px
+}
+.mgl-opening-text{position:relative;z-index:2}
+.mgl-opening h2,.mgl-content-heading h2{
+  margin:17px 0;font-family:"Cormorant Garamond",serif;
+  font-size:clamp(40px,5.2vw,68px);line-height:.99;font-weight:500;
+  letter-spacing:-1.5px
+}
+.mgl-opening h2 em,.mgl-content-heading h2 em{color:var(--mgl-gold);font-weight:500}
+.mgl-opening p,.mgl-content-heading p{
+  max-width:500px;color:var(--mgl-muted);font-size:13px;line-height:2.05
+}
+.mgl-open-btn{
+  display:inline-flex;align-items:center;gap:24px;margin-top:17px;padding:14px 21px;
+  border:1px solid var(--mgl-gold);background:transparent;color:var(--mgl-ink);
+  font-size:11px;font-weight:800;letter-spacing:.8px;cursor:pointer;
+  transition:background .3s,color .3s,transform .3s
+}
+.mgl-open-btn:hover{background:var(--mgl-gold);color:#fff;transform:translateY(-3px)}
+.mgl-arrow{color:var(--mgl-gold);font-size:18px;transition:transform .3s}
+.mgl-open-btn:hover .mgl-arrow{color:#fff;transform:translate(3px,-3px)}
+.mgl-opening-visual{
+  position:relative;height:340px;display:flex;align-items:center;justify-content:center
+}
+.mgl-orbit{
+  position:absolute;width:280px;height:280px;border:1px solid var(--mgl-light-gold);
+  border-radius:50%;pointer-events:none
+}
+.mgl-orbit-two{width:315px;height:315px;border-style:dashed;opacity:.55}
+.mgl-photo{
+  position:absolute;overflow:hidden;border-radius:50%;aspect-ratio:1;flex-shrink:0;
+  border:5px solid var(--mgl-cream);box-shadow:0 12px 40px #806b4920
+}
+.mgl-photo img{border-radius:50%;transition:transform .8s}
+.mgl-photo:hover img{transform:scale(1.1)}
+.mgl-photo-main{width:218px;height:218px;z-index:2}
+.mgl-photo-small{width:91px;height:91px;z-index:3}
+.mgl-photo-a{top:12px;right:8%}
+.mgl-photo-b{bottom:14px;left:7%}
+.mgl-photo-caption{
+  position:absolute;right:0;bottom:0;color:var(--mgl-gold);
+  font-size:8px;letter-spacing:2px;font-weight:800
+}
+/* Cursor-reactive divider */
+.mgl-divider{
+  position:relative;width:100%;height:62px;margin:30px 0;
+  display:flex;align-items:center;justify-content:center
+}
+.mgl-divider svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.mgl-divider path{
+  fill:none;stroke:var(--mgl-light-gold);stroke-width:1.5;
+  vector-effect:non-scaling-stroke
+}
+.mgl-divider span{
+  position:relative;z-index:1;display:grid;place-items:center;width:30px;height:30px;
+  border-radius:50%;background:var(--mgl-cream);color:var(--mgl-gold);font-size:13px
+}
+.mgl-main-content{padding-top:10px}
+.mgl-content-heading{max-width:790px;margin:0 auto 72px;text-align:center}
+.mgl-content-heading h2{font-size:clamp(38px,4.7vw,58px)}
+.mgl-content-heading p{max-width:690px;margin:18px auto 0}
+.mgl-story-row{
+  display:grid;grid-template-columns:.78fr 1.22fr;align-items:center;
+  gap:clamp(35px,7vw,90px);margin:0 0 58px
+}
+.mgl-story-row.mgl-reverse{grid-template-columns:1.22fr .78fr}
+.mgl-story-row.mgl-reverse .mgl-story-image{order:2}
+.mgl-story-row.mgl-reverse .mgl-story-text{order:1}
+.mgl-story-image,.mgl-future-image,.mgl-final-image{
+  position:relative;justify-self:center;aspect-ratio:1;border-radius:50%;
+  padding:8px;border:1px solid var(--mgl-light-gold)
+}
+.mgl-story-image{width:min(100%,220px)}
+.mgl-story-image>img,.mgl-future-image>img,.mgl-final-image>img{
+  width:100%;height:100%;border-radius:50%;object-fit:cover;
+  border:5px solid var(--mgl-cream);box-shadow:0 15px 45px #806b4920;
+  position:relative;z-index:1
+}
+.mgl-image-orbit{
+  position:absolute;inset:-10px;border:1px dashed var(--mgl-light-gold);
+  border-radius:50%;pointer-events:none
+}
+.mgl-image-index{
+  position:absolute;right:-5px;bottom:18px;z-index:3;display:grid;place-items:center;
+  width:36px;height:36px;border-radius:50%;background:var(--mgl-gold);color:#fff;
+  border:3px solid var(--mgl-cream);font-size:10px;font-weight:800
+}
+.mgl-story-text{max-width:690px}
+.mgl-story-text h3,.mgl-future-text h3,.mgl-final-text h3{
+  margin:11px 0 19px;font-family:"Cormorant Garamond",serif;
+  font-size:clamp(29px,3.3vw,42px);line-height:1.12;font-weight:600
+}
+.mgl-story-text p,.mgl-future-text p{
+  color:var(--mgl-muted);font-size:12.5px;line-height:2.15;margin-bottom:15px
+}
+.mgl-story-text strong,.mgl-future-text strong{color:var(--mgl-ink);font-weight:800}
+.mgl-future,.mgl-final{
+  display:grid;align-items:center;gap:clamp(35px,7vw,85px);
+  padding:42px 0 55px;
+}
+.mgl-future{grid-template-columns:.75fr 1.25fr}
+.mgl-future-image{width:min(100%,195px)}
+.mgl-future-text{max-width:690px}
+.mgl-final{grid-template-columns:.7fr 1.3fr;padding-bottom:30px}
+.mgl-final-image{width:min(100%,180px)}
+.mgl-final-text blockquote{
+  margin:18px 0;color:var(--mgl-muted);font-family:"Cormorant Garamond",serif;
+  font-size:clamp(19px,2.25vw,24px);line-height:1.8;white-space:pre-line
+}
+.mgl-final-text blockquote strong{color:var(--mgl-ink);font-weight:600}
+.mgl-signature{
+  display:flex;align-items:center;flex-wrap:wrap;gap:12px;color:var(--mgl-gold);
+  font-family:"Cormorant Garamond",serif;font-size:20px;font-style:italic
+}
+.mgl-forever{
+  font-family:"Manrope",sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase
+}
+.mgl-close-btn{
+  display:block;margin:35px auto 0;padding:12px 23px;border:1px solid var(--mgl-light-gold);
+  background:transparent;color:var(--mgl-muted);cursor:pointer;font-size:10px;
+  letter-spacing:1px;transition:.3s
+}
+.mgl-close-btn:hover{color:var(--mgl-ink);border-color:var(--mgl-gold);transform:translateY(-3px)}
+/* Keep reveal targets visible if JS / GSAP is unavailable */
+@media(max-width:760px){
+  .mgl-legacy{padding:38px 5%}
+  .mgl-top{grid-template-columns:1fr;justify-items:center;gap:12px;margin-bottom:25px}
+  .mgl-top-label,.mgl-language{grid-column:1;justify-self:center;text-align:center}
+  .mgl-opening{grid-template-columns:1fr;gap:12px;text-align:center}
+  .mgl-opening h2{font-size:clamp(37px,9vw,53px)}
+  .mgl-opening p{margin-left:auto;margin-right:auto}
+  .mgl-opening-visual{height:255px;margin-top:8px}
+  .mgl-photo-main{width:165px;height:165px}
+  .mgl-photo-small{width:72px;height:72px}
+  .mgl-orbit{width:215px;height:215px}
+  .mgl-orbit-two{width:240px;height:240px}
+  .mgl-photo-caption{right:5px}
+  .mgl-divider{height:48px;margin:22px 0 32px}
+  .mgl-content-heading{margin-bottom:48px}
+  .mgl-story-row,.mgl-story-row.mgl-reverse{
+    grid-template-columns:1fr;gap:25px;margin-bottom:45px
+  }
+  .mgl-story-row.mgl-reverse .mgl-story-image,
+  .mgl-story-row.mgl-reverse .mgl-story-text{order:initial}
+  .mgl-story-image{width:min(70vw,195px)}
+  .mgl-story-text{text-align:left}
+  .mgl-story-text h3,.mgl-future-text h3,.mgl-final-text h3{font-size:31px}
+  .mgl-story-text p,.mgl-future-text p{font-size:12px;line-height:2.05}
+  .mgl-future,.mgl-final{grid-template-columns:1fr;gap:25px;padding:32px 0 42px}
+  .mgl-future-image,.mgl-final-image{width:min(60vw,175px)}
+  .mgl-final-text{text-align:left}
+}
+@media(max-width:380px){
+  .mgl-eyebrow{font-size:8px;letter-spacing:1.8px}
+  .mgl-opening h2{font-size:35px}
+  .mgl-photo-main{width:145px;height:145px}
+  .mgl-orbit{width:195px;height:195px}
+  .mgl-orbit-two{width:215px;height:215px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mgl-legacy *, .mgl-legacy *::before,.mgl-legacy *::after{
+    scroll-behavior:auto!important;transition-duration:.01ms!important
+  }
+}
+
+/* Digital participation: Time Capsule + Guestbook */
+.mgl-community{padding:54px 0 24px;}
+.mgl-community-head{text-align:center;max-width:720px;margin:0 auto 38px}
+.mgl-community-head h2{font:500 clamp(36px,4.6vw,56px)/1.05 "Cormorant Garamond",serif;margin:12px 0;color:var(--mgl-ink)}
+.mgl-community-head p{font-size:12px;line-height:2;color:var(--mgl-muted);max-width:620px;margin:0 auto}
+.mgl-community-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,5vw,65px);align-items:start}
+.mgl-community-form{padding:10px 0 24px}
+.mgl-community-form h3{font:600 31px/1.1 "Cormorant Garamond",serif;margin:8px 0 9px;color:var(--mgl-ink)}
+.mgl-community-form>p{font-size:11px;line-height:1.9;color:var(--mgl-muted);margin-bottom:20px}
+.mgl-field{display:block;margin:0 0 14px}
+.mgl-field span{display:block;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--mgl-gold);margin-bottom:7px}
+.mgl-field input,.mgl-field textarea{width:100%;border:1px solid #d9c9a9;background:#fffdf8;color:var(--mgl-ink);padding:13px 14px;font:500 12px "Manrope",sans-serif;outline:none;border-radius:0;transition:border-color .25s,box-shadow .25s}
+.mgl-field textarea{min-height:115px;resize:vertical;line-height:1.8}
+.mgl-field input:focus,.mgl-field textarea:focus{border-color:var(--mgl-gold);box-shadow:0 0 0 3px #b9955518}
+.mgl-field input::placeholder,.mgl-field textarea::placeholder{color:#b5a894}
+.mgl-consent{display:flex;align-items:flex-start;gap:9px;color:var(--mgl-muted);font-size:10px;line-height:1.8;margin:13px 0 17px}
+.mgl-consent input{accent-color:var(--mgl-gold);margin-top:3px;flex:0 0 auto}
+.mgl-submit{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:45px;padding:12px 20px;border:1px solid var(--mgl-gold);background:var(--mgl-gold);color:white;font-size:10px;font-weight:800;letter-spacing:1px;cursor:pointer;transition:.25s}
+.mgl-submit:hover{background:#9e7b40;transform:translateY(-2px)}
+.mgl-submit:disabled{opacity:.6;cursor:wait;transform:none}
+.mgl-form-status{min-height:24px;margin:12px 0 0;font-size:11px;line-height:1.8;color:var(--mgl-ink)}
+.mgl-form-status.success{color:#47734c}.mgl-form-status.error{color:#a34d3f}
+.mgl-guideline{border-left:2px solid var(--mgl-light-gold);padding:10px 13px;margin:17px 0;color:var(--mgl-muted);font-size:10px;line-height:1.85;background:#fffdf84d}
+.mgl-wall{margin:42px 0 5px;padding-top:30px;border-top:1px solid var(--mgl-light-gold)}
+.mgl-wall h3{text-align:center;font:500 34px "Cormorant Garamond",serif;margin:8px 0 6px}
+.mgl-wall-intro{text-align:center;color:var(--mgl-muted);font-size:10px;line-height:1.8;margin-bottom:22px}
+.mgl-approved-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.mgl-approved-note{padding:17px 0 15px;border-bottom:1px solid var(--mgl-light-gold)}
+.mgl-approved-note blockquote{margin:0 0 10px;font:italic 19px/1.55 "Cormorant Garamond",serif;color:var(--mgl-ink)}
+.mgl-approved-note small{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--mgl-gold)}
+.mgl-review-note{text-align:center;color:var(--mgl-muted);font-size:9px;line-height:1.8;margin:22px auto 0;max-width:620px}
+@media(max-width:760px){.mgl-community{padding-top:38px}.mgl-community-grid{grid-template-columns:1fr;gap:22px}.mgl-approved-list{grid-template-columns:1fr}.mgl-community-form h3{font-size:29px}}
+/* Community testimonial avatar stack */
+.mgl-memory-presence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 34px;
+  padding: 8px 12px 4px;
+  position: relative;
+}
+
+.mgl-avatar-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 13px;
+}
+
+.mgl-avatar {
+  --avatar-size: 40px;
+  --avatar-delay: 0s;
+
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  flex: 0 0 var(--avatar-size);
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-left: -10px;
+  border: 3px solid var(--mgl-cream);
+  background: #e8ddc8;
+  box-shadow: 0 3px 12px #493c2e18;
+
+  opacity: 0;
+  transform: translateY(12px) scale(.7);
+  animation:
+    mglAvatarEnter .65s cubic-bezier(.2,.8,.2,1) var(--avatar-delay) forwards,
+    mglAvatarFloat 3s ease-in-out calc(var(--avatar-delay) + .7s) infinite;
+}
+
+.mgl-avatar:first-child {
+  margin-left: 0;
+}
+
+.mgl-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Progressively smaller circles */
+.mgl-avatar:nth-child(1) { --avatar-size: 49px; --avatar-delay: .05s; z-index: 9; }
+.mgl-avatar:nth-child(2) { --avatar-size: 44px; --avatar-delay: .13s; z-index: 8; }
+.mgl-avatar:nth-child(3) { --avatar-size: 39px; --avatar-delay: .21s; z-index: 7; }
+.mgl-avatar:nth-child(4) { --avatar-size: 35px; --avatar-delay: .29s; z-index: 6; }
+.mgl-avatar:nth-child(5) { --avatar-size: 31px; --avatar-delay: .37s; z-index: 5; }
+.mgl-avatar:nth-child(6) { --avatar-size: 27px; --avatar-delay: .45s; z-index: 4; }
+.mgl-avatar:nth-child(7) { --avatar-size: 23px; --avatar-delay: .53s; z-index: 3; }
+.mgl-avatar:nth-child(8) { --avatar-size: 20px; --avatar-delay: .61s; z-index: 2; }
+.mgl-avatar:nth-child(9) { --avatar-size: 17px; --avatar-delay: .69s; z-index: 1; }
+
+.mgl-presence-caption {
+  color: var(--mgl-muted);
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: .2px;
+}
+
+.mgl-presence-caption strong {
+  color: var(--mgl-gold);
+  font-weight: 800;
+}
+
+@keyframes mglAvatarEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes mglAvatarFloat {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -3px; }
+}
+
+/* Mobile responsive */
+@media(max-width:760px) {
+  .mgl-memory-presence {
+    margin-bottom: 25px;
+  }
+
+  .mgl-avatar-stack {
+    margin-bottom: 10px;
+  }
+
+  .mgl-avatar {
+    margin-left: -9px;
+    border-width: 2px;
+  }
+
+  .mgl-avatar:nth-child(1) { --avatar-size: 43px; }
+  .mgl-avatar:nth-child(2) { --avatar-size: 39px; }
+  .mgl-avatar:nth-child(3) { --avatar-size: 35px; }
+  .mgl-avatar:nth-child(4) { --avatar-size: 31px; }
+  .mgl-avatar:nth-child(5) { --avatar-size: 27px; }
+  .mgl-avatar:nth-child(6) { --avatar-size: 24px; }
+  .mgl-avatar:nth-child(7) { --avatar-size: 21px; }
+  .mgl-avatar:nth-child(8) { --avatar-size: 18px; }
+  .mgl-avatar:nth-child(9) { --avatar-size: 15px; }
+
+  .mgl-presence-caption {
+    font-size: 9px;
+    max-width: 290px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .mgl-avatar {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+</style>
+<link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+</head>
+<body>
+
+<section class="mgl-legacy" id="mglLegacy">
+  <h2 class="heading">If Only<span><i class="ri-camera-ai-fill" style="font-size: 11px;  "></i></span><span><i class="ri-camera-ai-fill" style="font-size: 9px;"></i></span><span><i class="ri-camera-ai-fill" style="font-size: 8.5px;"></i></span>  <i class="ri-hearts-fill" style="color: #E85D75;"></i></h2>
+  <style>
+   .heading {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 6.5vw;
+    color: #734425;
+    text-transform: uppercase;
+    line-height: 0.95;
+    
+    @media (max-width: 600px) {
+    .heading {
+        font-size: clamp(30px, 9vw, 42px);
+    }
+}
+}
+  </style>
+  
+  <header class="mgl-top">
+    <div class="mgl-top-label"><span class="mgl-eyebrow">Those Moments We Never Forget</span></div>
+     <div class="mgl-language" aria-label="Choose language">
+      <button class="mgl-lang-btn active" type="button" data-lang="hi" aria-pressed="true">हिंदी</button>
+      <span>|</span>
+      <button class="mgl-lang-btn" type="button" data-lang="en" aria-pressed="false">ENGLISH</button>
+    </div> 
+    <style>
+      /* =================================
+   MGL — ANIMATED LANGUAGE SWITCH
+================================= */
+
+.mgl-language {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 4px;
+    position: relative;
+    isolation: isolate;
+    border: 1px solid rgba(185, 151, 80, .35);
+    border-radius: 30px;
+    background: rgba(245, 240, 225, .75);
+    box-shadow: 0 3px 12px rgba(45, 65, 40, .07);
+}
+
+/* Sliding active background */
+.mgl-language::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 3px);
+    border-radius: 25px;
+    background: #344b35;
+    box-shadow: 0 2px 8px rgba(52, 75, 53, .25);
+    transition: transform .45s cubic-bezier(.68, -0.2, .25, 1.3);
+}
+
+.mgl-language:has(.mgl-lang-btn[data-lang="en"].active)::before {
+    transform: translateX(100%);
+}
+
+.mgl-lang-btn {
+    position: relative;
+    min-width: 65px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 25px;
+    background: transparent;
+    color: #777969;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    cursor: pointer;
+    transition: color .35s ease, transform .25s ease;
+}
+
+.mgl-lang-btn.active {
+    color: #fffaf0;
+    animation: mglLangPop .4s ease;
+}
+
+.mgl-lang-btn:not(.active):hover {
+    color: #344b35;
+    transform: translateY(-1px);
+}
+
+.mgl-lang-btn:active {
+    transform: scale(.91);
+}
+
+.mgl-lang-divider {
+    display: none;
+}
+
+@keyframes mglLangPop {
+    0%   { transform: scale(.88); }
+    65%  { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.mgl-lang-btn:focus-visible {
+    outline: 2px solid #b99750;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .mgl-lang-btn {
+        min-width: 58px;
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mgl-language::before,
+    .mgl-lang-btn {
+        transition: none;
+        animation: none;
+    }
+}
+    </style>
+    
+ 
+    <div></div>
+  </header>
+
+  <div class="mgl-opening">
+    <div class="mgl-opening-text">
+      <span class="mgl-small-label" data-hi style="color:#734425">एक छोटी-सी शुरुआत...</span>
+      <span class="mgl-small-label" data-en hidden style="color:#734425">A little beginning...</span>
+
+      <h2 data-hi>
+    <img src="imgs/me.png" alt="" class="mgl-heading-img">
+   
+     कुछ यादें<br>
+    <em style="color:#734425">कभी खत्म न होतीं।</em>
+</h2>
+
+<h2 data-en hidden>
+    <img src="imgs/connect.png" alt="" class="mgl-heading-img"> 
+  
+    If Only Some Memories<br>
+    <em style="color:#734425">Never Faded...</em>
+</h2>
+<style>
+  .mgl-heading-img {
+    width: 0.85em !important;
+    height: 0.85em !important;
+    max-width: 0.85em !important;
+    max-height: 0.85em !important;
+    object-fit: cover;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    position: relative !important;
+    top: 0 !important;
+    margin: 0 3px 0 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    animation: none !important;
+}
+</style>
+
+      <p data-hi>एक छोटा-सा प्रयास, उस गाँव के नाम... जिसने मुझे मेरी पहचान दी। कुछ यादें, कुछ कहानियाँ और अपनी मिट्टी से जुड़ा एक एहसास — इन्हें आने वाले कल के लिए सँजोने की एक कोशिश।</p>
+      <p data-en hidden>A little effort, dedicated to the village that gave me my identity. A few memories, a few stories, and a feeling connected to my roots — preserved for the generations yet to come.</p>
+
+      <!-- <button class="mgl-open-btn" id="mglOpenBtn" type="button">
+        <span data-hi>मेरी पूरी कहानी पढ़ें</span>
+        <span data-en hidden>Read My Full Story</span>
+        <span class="mgl-arrow">↗</span>
+      </button> -->
+      <button class="mgl-open-btn" id="mglOpenBtn" type="button">
+
+<span class="mgl-btn-sun">
+    <img src="imgs/connect.png" alt="My Logo">
+</span>
+  <span class="mgl-btn-content">
+    <span class="mgl-btn-small">
+      <span data-hi style="color:#734425">मेरा गाँव ❤️</span>
+      <span data-en hidden style="color:#734425">Mera Gaon ❤️</span>
+    </span>
+
+    <span class="mgl-btn-title">
+      <span data-hi>आगे पढ़ें  </span>
+      <span data-en hidden>Explore More</span>
+    </span>
+  </span>
+
+  <span class="mgl-btn-arrow">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 4V19M6 13L12 19L18 13"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"/>
+    </svg>
+  </span>
+
+  <span class="mgl-btn-decoration">✳</span>
+
+</button>
+
+<style>
+  .mgl-open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    background: #f3ead8;
+    color: #493b2b;
+    border: 1px solid #b99a68;
+    border-radius: 50px;
+    font: inherit;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.mgl-btn-sun,
+.mgl-btn-sun img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.mgl-btn-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.mgl-btn-small {
+    font-size: 8px;
+    color: #92764d;
+    letter-spacing: 1px;
+}
+
+.mgl-btn-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mgl-btn-arrow {
+    color: #92764d;
+}
+
+.mgl-btn-decoration {
+    display: none;
+}
+
+.mgl-open-btn:hover {
+    background: #e8dcc4;
+    transform: translateY(-2px);
+}
+</style>
+<script>
+  /* DESI VILLAGE BUTTON REVEAL */
+
+const villageBtn = section.querySelector("#mglOpenBtn");
+
+if (villageBtn && gsap && !reducedMotion) {
+
+  gsap.fromTo(villageBtn,
+    {
+      autoAlpha: 0,
+      y: 45,
+      rotation: -3,
+      scale: .88
+    },
+    {
+      autoAlpha: 1,
+      y: 0,
+      rotation: 0,
+      scale: 1,
+      duration: 1.2,
+      ease: "elastic.out(1, .65)",
+      scrollTrigger: ScrollTrigger ? {
+        trigger: villageBtn,
+        start: "top 92%",
+        once: true
+      } : undefined
+    }
+  );
+
+  // Gentle village-style floating
+  gsap.to(villageBtn, {
+    y: -3,
+    duration: 2.5,
+    repeat: -1,
+    yoyo: true,
+    ease: "sine.inOut",
+    delay: 1.3
+  });
+
+}
+</script>
+    </div>
+
+    <div class="mgl-opening-visual">
+      <div class="mgl-orbit mgl-orbit-one"></div>
+      <div class="mgl-orbit mgl-orbit-two"></div>
+      <div class="mgl-photo mgl-photo-main"><img src="head.jpeg" alt="Bhamori Khurd village"></div>
+      <div class="mgl-photo mgl-photo-small mgl-photo-a"><img src="WhatsApp Image 2026-11-01 at 8.38.40 .jpeg" alt="Village streets"></div>
+      <div class="mgl-photo mgl-photo-small mgl-photo-b"><img src="gaon.jpeg" alt="Village people"></div>
+      <span class="mgl-photo-caption">OUR ROOTS · OUR STORY</span>
+    </div>
+    
+  </div>
+
+  <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none" style="color:3734425"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+  <div class="mgl-main-content" id="mglMainContent" hidden>
+    <div class="mgl-content-heading">
+      <span class="mgl-small-label" data-hi>दिल से निकली एक बात...</span>
+      <span class="mgl-small-label" data-en hidden>A thought from the heart...</span>
+      <h2 data-hi>एक गाँव, <em style="color:#734425">अनगिनत यादें।</em></h2>
+      <h2 data-en hidden>One Village, <em style="color:#734425">Countless Memories.</em></h2>
+      <p data-hi>कहते हैं, समय किसी के लिए नहीं रुकता... लेकिन शायद यादों को सँजोकर हम अपने बीते हुए कल का एक छोटा-सा हिस्सा आने वाले कल तक पहुँचा सकते हैं।</p>
+      <p data-en hidden>They say time waits for no one... but perhaps by preserving our memories, we can carry a little piece of yesterday into tomorrow.</p>
+    </div>
+
+    <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- 01 — Opening thought -->
+    <article class="mgl-story-row">
+      <div class="mgl-story-image"><div class="mgl-image-orbit"></div><img src="images/legacy/01-village.jpg" alt="Village memories"><span class="mgl-image-index">01</span></div>
+      <div class="mgl-story-text">
+        <span class="mgl-small-label" data-hi style="color:#734425">कुछ यादें कभी खत्म नहीं होतीं</span><span class="mgl-small-label" data-en hidden style="color:#734425">SOME MEMORIES NEVER FADE</span>
+        <h3 data-hi><i class="ri-flower-fill"></i> काश... कुछ यादें कभी खत्म न होतीं।</h3>
+        <h3 data-en hidden><i class="ri-flower-fill"></i> If Only Some Memories Never Faded...</h3>
+        <p data-hi>कहते हैं, समय किसी के लिए नहीं रुकता...</p>
+        <p data-hi>आज जिन गलियों में हँसी गूँजती है, कल वहाँ खामोशी भी हो सकती है। आज जिन चेहरों के साथ हम अपना हर दिन बिताते हैं, एक दिन वे सिर्फ तस्वीरों में रह जाएँगे। बचपन की वे शरारतें, दोस्तों के साथ बिताए वे अनमोल पल, घर के आँगन में गूँजती आवाज़ें, अपनों का साथ और गाँव की मिट्टी की वह खुशबू... शायद एक दिन सब कुछ सिर्फ याद बनकर रह जाए।</p>
+        <p data-hi>और सबसे बड़ी सच्चाई यह है कि एक दिन हम भी इन यादों का हिस्सा बन जाएँगे।</p>
+        <p data-hi>लेकिन क्या सच में सब कुछ खत्म हो जाना चाहिए? क्या हमारी पहचान, हमारी कहानियाँ, हमारे गाँव का इतिहास और हमारे अपनों की यादें भी समय के साथ कहीं खो जानी चाहिए?</p>
+        <p data-hi><strong style="color:#734425">शायद इसी सवाल ने इस छोटी-सी कोशिश को जन्म दिया।</strong> ❤️</p>
+
+        <p data-en hidden>They say time waits for no one...</p>
+        <p data-en hidden>The streets that echo with laughter today may one day fall silent. The faces we see every day may eventually remain only in photographs. Those childhood mischiefs, priceless moments with friends, familiar voices from our homes, the warmth of our loved ones, and the fragrance of our village soil... someday, they may all become memories.</p>
+        <p data-en hidden>And the greatest truth is that one day, we too will become a part of those memories.</p>
+        <p data-en hidden>But does everything really have to disappear? Must our identity, our stories, our village history, and the memories of our people slowly fade away with time?</p>
+        <p data-en hidden><strong style="color:#734425">Perhaps this very question gave birth to this little effort.</strong> ❤️</p>
+      </div>
+    </article>
+
+    <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- 02 — More than a website -->
+    <article class="mgl-story-row mgl-reverse">
+      <div class="mgl-story-image"><div class="mgl-image-orbit"></div><img src="head.jpeg" alt="Village streets"><span class="mgl-image-index">02</span></div>
+      <div class="mgl-story-text">
+        <span class="mgl-small-label" data-hi style="color:#734425">मेरे गाँव के नाम</span><span class="mgl-small-label" data-en hidden style="color:#734425">DEDICATED TO MY VILLAGE</span>
+        <h3 data-hi><i class="ri-poker-hearts-fill"></i> एक छोटा-सा प्रयास, उस गाँव के नाम... जिसने मुझे मेरी पहचान दी।<br><br> <i class="ri-global-fill"></i> यह सिर्फ एक वेबसाइट नहीं है...</h3>
+        <h3 data-en hidden><i class="ri-poker-hearts-fill"></i>  A Little Effort, Dedicated to the Village That Gave Me My Identity.<br><br><i class="ri-global-fill"> </i> This Is More Than Just a Website...</h3>
+        <p data-hi>इसमें कोई व्यापार छिपा नहीं है, न किसी प्रसिद्धि की चाह है, न किसी पुरस्कार की उम्मीद और न ही कोई व्यक्तिगत स्वार्थ।</p>
+        <p data-hi>मैंने इसे सिर्फ अपने गाँव के लिए बनाया है। उस गाँव के लिए, जिसकी गलियों में न जाने कितनी कहानियाँ बसी हैं। उस मिट्टी के लिए, जिसने मुझे अपनी पहचान दी। उन लोगों के लिए, जिनके बीच मेरा बचपन, मेरी यादें और मेरे जीवन के अनगिनत खूबसूरत पल जुड़े हैं।</p>
+        <p data-hi>शायद मैं अपने गाँव के लिए दुनिया बदलने जितना कुछ न कर सकूँ, लेकिन मैं इतना ज़रूर करना चाहता था कि इसकी कुछ यादें समय की धूल में खो न जाएँ।</p>
+        <p data-hi>यहाँ सँजोई गई हर तस्वीर सिर्फ एक तस्वीर नहीं है। इसके पीछे कोई चेहरा है, कोई कहानी है, कोई बीता हुआ पल है और शायद किसी के दिल का सबसे खूबसूरत हिस्सा है।</p>
+        <p data-hi>हो सकता है आज ये तस्वीरें साधारण लगें, लेकिन कौन जानता है कि आने वाले वर्षों में इन्हीं तस्वीरों को देखकर किसी की आँखें भर आएँगी। कोई अपने बचपन को याद करेगा, कोई अपने बिछड़े दोस्तों को, कोई अपने माता-पिता को और कोई उस घर को, जहाँ लौटने की इच्छा तो बहुत होगी, मगर शायद लौट पाना संभव न हो।</p>
+        <p data-hi><strong style="color:#734425">मैं चाहता हूँ कि यह मंच उन सभी यादों के लिए एक छोटा-सा घर बनकर रहे, जिन्हें इंसान अपने दिल से कभी विदा नहीं कर पाता।</strong> 🥺</p>
+
+        <p data-en hidden>There is no business hidden behind it. No desire for fame, no expectation of awards, and no personal gain.</p>
+        <p data-en hidden>I created this simply for my village. For the village whose streets hold countless untold stories. For the soil that gave me my roots. For the people among whom my childhood, my memories, and so many beautiful moments of my life belong.</p>
+        <p data-en hidden>Perhaps I cannot change the world for my village, but I wanted to do something small so that some of its memories would not disappear beneath the dust of time.</p>
+        <p data-en hidden>Every photograph preserved here is more than just an image. Behind it, there is a face, a story, a moment that has passed, and perhaps a beautiful part of someone's heart.</p>
+        <p data-en hidden>These photographs may seem ordinary today, but who knows? Years from now, someone may look at them with tears in their eyes. Someone may remember their childhood, someone they once called a friend, their parents, or the home they long to return to but perhaps can no longer reach.</p>
+        <p data-en hidden><strong style="color:#734425">I want this platform to become a little home for all those memories that the human heart never truly learns to say goodbye to.</strong> 🥺</p>
+      </div>
+    </article>
+
+    <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- 03 — One day I may not be here -->
+    <article class="mgl-story-row">
+      <div class="mgl-story-image"><div class="mgl-image-orbit"></div><img src="me.png" alt="People and memories"><span class="mgl-image-index">03</span></div>
+      <div class="mgl-story-text">
+        <span class="mgl-small-label" data-hi style="color:#734425">वक़्त और यादें</span><span class="mgl-small-label" data-en hidden style="color:#734425">TIME & MEMORIES</span>
+        <h3 data-hi><i class="ri-time-fill"></i> शायद एक दिन मैं भी यहाँ न रहूँ...</h3>
+        <h3 data-en hidden><i class="ri-time-fill"></i> Perhaps One Day, I May No Longer Be Here...</h3>
+        <p data-hi>यह सोचकर मन थोड़ा ठहर जाता है कि आज जो कुछ हम देख रहे हैं, वह हमेशा हमारे सामने नहीं रहेगा।</p>
+        <p data-hi>एक दिन यह समय भी बीत जाएगा। शायद मेरा नाम भी लोगों की यादों से धीरे-धीरे धुंधला पड़ जाए। शायद कोई मुझे व्यक्तिगत रूप से न जानता हो। लेकिन अगर कभी कोई इस मंच को खोले और यहाँ कुछ ऐसा पाए जो उसके दिल को छू जाए, तो मेरे लिए इससे बड़ी बात क्या होगी?</p>
+        <p data-hi>मैं नहीं चाहता कि लोग मुझे याद रखने के लिए मजबूर हों। मैं बस चाहता हूँ कि मेरा यह छोटा-सा प्रयास इतना सच्चा हो कि इसे देखने वाला अपने गाँव से और अधिक प्रेम करने लगे।</p>
+        <p data-hi>अगर कभी कोई आने वाली पीढ़ी का बच्चा यहाँ आकर अपने गाँव के बारे में जाने, अपने बड़ों की कहानियाँ पढ़े और अपनी जड़ों को समझे, तो समझूँगा कि यह कोशिश व्यर्थ नहीं गई।</p>
+        <p data-hi><strong style="color:#734425">मैं शायद हर आने वाले कल का हिस्सा न बन सकूँ, लेकिन मेरी यह कोशिश आने वाले कल के किसी खूबसूरत पल का हिस्सा ज़रूर बने।</strong> ❤️</p>
+
+        <p data-en hidden>There is something deeply humbling about realising that nothing we see today is promised to remain forever.</p>
+        <p data-en hidden>One day, this time too shall pass. Perhaps even my name will slowly fade from people's memories. Perhaps someone visiting this platform will never have known me personally. But if they discover something here that touches their heart, what greater meaning could this little effort have?</p>
+        <p data-en hidden>I do not want anyone to remember me out of obligation. I simply hope that this effort is sincere enough to make someone love their village a little more.</p>
+        <p data-en hidden>If a child from a future generation discovers this place, learns about their village, reads the stories of their elders, and understands where their roots belong, then I will know that this effort was never in vain.</p>
+        <p data-en hidden><strong style="color:#734425">I may not be a part of every tomorrow, but I hope this little effort becomes a part of someone's beautiful tomorrow.</strong> ❤️</p>
+      </div>
+    </article>
+
+    <div class="mgl-divider" aria-hidden="true" style="color:#734425"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- 04 — Future generations -->
+    <article class="mgl-story-row mgl-reverse">
+      <div class="mgl-story-image"><div class="mgl-image-orbit"></div><img src="images/legacy/03-nature.jpg" alt="Village nature"><span class="mgl-image-index">04</span></div>
+      <div class="mgl-story-text">
+        <span class="mgl-small-label" data-hi style="color:#734425">आने वाले कल के नाम</span><span class="mgl-small-label" data-en hidden style="color:#734425" >FOR TOMORROW</span>
+        <h3 data-hi><i class="ri-plant-fill"></i> आने वाली पीढ़ियों से मेरी एक विनती...</h3>
+        <h3 data-en hidden><i class="ri-plant-fill"></i> A Humble Request to the Generations Yet to Come...</h3>
+        <p data-hi>जो लोग आज इस गाँव में हैं, और जो आने वाले वर्षों में इस गाँव की पहचान बनेंगे, उनसे दिल से एक बात कहना चाहता हूँ...</p>
+        <p data-hi>अपने गाँव के लिए कुछ कीजिए। सिर्फ अपने लिए मत जिएँ, उस मिट्टी के लिए भी कुछ छोड़कर जाइए जिसने आपको पहचान दी है।</p>
+        <p data-hi>कोई शिक्षा के क्षेत्र में योगदान दे, कोई पेड़ लगाए, कोई गाँव के इतिहास को सँजोए, कोई नई तकनीक लाए, कोई गरीब बच्चे की पढ़ाई में मदद करे और कोई ऐसा काम करे जिससे गाँव का भविष्य बेहतर बने।</p>
+        <p data-hi>आपको मेरी तरह वेबसाइट बनाने की ज़रूरत नहीं है। आपको मुझसे सहमत होने की भी ज़रूरत नहीं है।</p>
+        <p data-hi><strong style="color:#734425">बस मुझसे बेहतर कुछ कीजिए। मेरी इस छोटी-सी शुरुआत को मुझसे कहीं आगे ले जाइए।</strong></p>
+        <p data-hi>हो सकता है आपकी बनाई हुई कोई चीज़ कल किसी बच्चे का सपना बन जाए। आपकी बचाई हुई कोई याद किसी परिवार के लिए अनमोल धरोहर बन जाए। आपका किया हुआ कोई छोटा-सा काम आने वाली पीढ़ियों की ज़िंदगी बदल दे।</p>
+        <p data-hi>और तब शायद कोई किसी और से कहेगा — कभी किसी ने हमारे गाँव के लिए कुछ किया था, और आज हम उसी से प्रेरित होकर आगे बढ़ रहे हैं।</p>
+        <p data-hi><strong style="color:#734425">यही तो असली विरासत है। यही तो अपने गाँव से प्रेम करने का अर्थ है।</strong> 🌿</p>
+
+        <p data-en hidden>To everyone living in this village today, and to everyone who will become a part of its story in the years ahead, I have something to say from the bottom of my heart...</p>
+        <p data-en hidden>Do something for your village. Do not live only for yourselves. Leave something meaningful behind for the soil that gave you your identity.</p>
+        <p data-en hidden>Contribute to education. Plant a tree. Preserve your village's history. Bring new technology. Help a child receive an education. Do something, however small, that makes the future of your village brighter.</p>
+        <p data-en hidden>You do not have to build a website like mine. You do not even have to agree with everything I have done.</p>
+        <p data-en hidden><strong style="color:#734425">Just create something better. Take this little beginning further than I ever could.</strong></p>
+        <p data-en hidden>Perhaps something you create today will become a dream for a child tomorrow. Perhaps a memory you preserve will become a priceless treasure for a family. Perhaps one small act of kindness will change the lives of generations.</p>
+        <p data-en hidden>And someday, someone may tell another person — someone once did something for our village, and today we are moving forward inspired by that effort.</p>
+        <p data-en hidden><strong style="color:#734425">That is what a true legacy means. That is what loving your village truly means.</strong> 🌿</p>
+      </div>
+    </article>
+
+    <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- 05 — A thought to remember -->
+    <article class="mgl-story-row">
+      <div class="mgl-story-image"><div class="mgl-image-orbit"></div><img src="images/legacy/05-home.jpg" alt="Village home"><span class="mgl-image-index">05</span></div>
+      <div class="mgl-story-text">
+        <span class="mgl-small-label" data-hi>एक एहसास हमेशा के लिए</span><span class="mgl-small-label" data-en hidden>A FEELING TO LAST</span>
+        <h3 data-hi><i class="ri-hearts-fill"></i> एक बात, जो शायद हमेशा याद रहे...</h3>
+        <h3 data-en hidden><i class="ri-hearts-fill"></i> Something I Hope Will Always Be Remembered...</h3>
+        <p data-hi>समय बीत जाएगा। मौसम बदलेंगे। गाँव की गलियाँ बदल सकती हैं। पुराने घरों की जगह नए घर बन सकते हैं। कुछ चेहरे हमेशा के लिए तस्वीरों में सिमट सकते हैं।</p>
+        <p data-hi>लेकिन मेरी इच्छा है कि इस गाँव का अपनापन कभी न बदले।</p>
+        <p data-hi>यहाँ आने वाला हर व्यक्ति महसूस करे कि वह सिर्फ किसी वेबसाइट पर नहीं आया, बल्कि अपनी मिट्टी, अपनी जड़ों और अपनी यादों के बीच लौट आया है।</p>
+        <p data-hi>अगर कभी किसी दूर बैठे इंसान को यह मंच देखकर अपने गाँव की याद आ जाए, अगर किसी बुज़ुर्ग को अपने बीते हुए दिन याद आ जाएँ, अगर कोई बच्चा अपने गाँव की पहचान पर गर्व करना सीख जाए — तो मेरी इस कोशिश को उसका सबसे सुंदर उपहार मिल चुका होगा।</p>
+        <p data-hi><strong>मैंने यह मंच किसी दिन के लिए नहीं, आने वाले समय के लिए बनाया है।</strong></p>
+        <p data-hi>क्योंकि कुछ चीज़ें अपने लिए नहीं बनाई जातीं... उन्हें दूसरों के कल के लिए सँजोया जाता है।</p>
+
+        <p data-en hidden>Time will pass. Seasons will change. The streets of this village may look different. New homes may stand where old houses once stood. Some familiar faces may live forever only in photographs.</p>
+        <p data-en hidden>But I hope the warmth of this village never changes.</p>
+        <p data-en hidden>May everyone who visits this platform feel that they have not simply opened a website, but have returned to their roots, their memories, and the place they call home.</p>
+        <p data-en hidden>If someone living far away remembers their village through this platform, if an elderly person remembers the beautiful days of their youth, or if a child learns to feel proud of their village's identity, then this effort will have received its most beautiful reward.</p>
+        <p data-en hidden><strong>I did not create this platform for a single day. I created it with the hope that it may belong to the years yet to come.</strong></p>
+        <p data-en hidden>Because some things are not created for ourselves alone... they are preserved for the tomorrows of others.</p>
+      </div>
+    </article>
+
+    <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- 06 — Final words -->
+    <article class="mgl-story-row mgl-reverse">
+      <div class="mgl-story-image"><div class="mgl-image-orbit"></div><img src="images/legacy/06-sunset.jpg" alt="Village at sunset"><span class="mgl-image-index">06</span></div>
+      <div class="mgl-story-text">
+        <span class="mgl-small-label" data-hi>आखिरी कुछ शब्द</span><span class="mgl-small-label" data-en hidden>A FEW FINAL WORDS</span>
+        <h3 data-hi><i class="ri-emotion-line"></i> आखिरी कुछ शब्द... शायद सबसे ज़रूरी</h3>
+        <h3 data-en hidden><i class="ri-emotion-line"></i> A Few Final Words... Perhaps the Most Important Ones</h3>
+        <p data-hi>अगर कभी समय बहुत आगे निकल जाए...</p>
+        <p data-hi>अगर इस गाँव की गलियों में नए चेहरे हों, अगर यहाँ की पुरानी आवाज़ें सुनाई न दें, अगर इस मंच को खोलने वाला कोई ऐसा व्यक्ति हो जिसने मुझे कभी देखा तक न हो...</p>
+        <p data-hi>तो उससे बस एक बात कहना चाहूँगा —</p>
+        <p data-hi><strong>मुझे जानना ज़रूरी नहीं है, मेरी कोशिश को समझ लेना ही बहुत है।</strong></p>
+        <p data-hi>जब कभी इस गाँव की गलियों से गुज़रना, तो उन लोगों को याद करना जिन्होंने इन गलियों को अपनी हँसी से सजाया था।</p>
+        <p data-hi>जब कभी इस मिट्टी को छूना, तो उन हाथों को याद करना जिन्होंने इसे अपना घर कहा था।</p>
+        <p data-hi>और जब कभी इस मंच को खोलना, तो बस इतना याद रखना कि किसी ने कभी अपने गाँव की यादों को मिटने से बचाने के लिए अपने समय का एक हिस्सा यहाँ छोड़ दिया था।</p>
+        <p data-hi>मैंने तो बस एक छोटी-सी शुरुआत की थी...</p>
+        <p data-hi>अब तुम इसे मुझसे भी आगे ले जाना। इसे इतना प्यार देना कि आने वाली पीढ़ियाँ भी अपने गाँव के लिए कुछ नया करने का सपना देखें।</p>
+        <p data-hi><strong>क्योंकि मैं नहीं जानता कि कल मैं यहाँ रहूँगा या नहीं... लेकिन मेरी एक छोटी-सी ख्वाहिश है — मेरा गाँव हमेशा अपनी कहानियों के साथ ज़िंदा रहे।</strong> ❤️</p>
+
+        <p data-en hidden>If someday time has travelled far ahead...</p>
+        <p data-en hidden>If new faces walk through these village streets, if the old familiar voices are no longer heard, if someone opens this platform who has never even seen me...</p>
+        <p data-en hidden>Then there is just one thing I would want to say —</p>
+        <p data-en hidden><strong>You do not need to know who I was. Understanding why I tried is more than enough.</strong></p>
+        <p data-en hidden>Whenever you walk through these streets, remember those who once filled them with laughter.</p>
+        <p data-en hidden>Whenever you touch this soil, remember the hands that once called it home.</p>
+        <p data-en hidden>And whenever you open this platform, remember that someone once left a little piece of their time here, hoping to protect the memories of a village they loved.</p>
+        <p data-en hidden>I only planted a little seed...</p>
+        <p data-en hidden>Now take it further than I ever could. Give it so much love that generations yet to come are inspired to dream of creating something of their own for their village.</p>
+        <p data-en hidden><strong>Because I do not know whether I will be here tomorrow... but I have one little wish — may my village always remain alive through its stories.</strong> ❤️</p>
+      </div>
+    </article>
+
+    <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+    <!-- Closing legacy -->
+    <div class="mgl-final">
+      <div class="mgl-final-image"><img src="images/legacy/01-village.jpg" alt="My village, my roots"></div>
+      <div class="mgl-final-text">
+        <span class="mgl-small-label" data-hi>मेरा गाँव, मेरी मिट्टी, मेरी पहचान</span>
+        <span class="mgl-small-label" data-en hidden>MY VILLAGE, MY SOIL, MY IDENTITY</span>
+        <h3 data-hi><i class="ri-home-heart-fill"></i> मेरा गाँव... मेरी मिट्टी... मेरी पहचान।</h3>
+        <h3 data-en hidden><i class="ri-home-heart-fill"></i> My Village... My Soil... My Identity.</h3>
+        <blockquote data-hi>जब तक इसकी यादें ज़िंदा हैं, यह प्रयास भी ज़िंदा रहेगा।  <i class="ri-service-fill"></i>
+
+</blockquote>
+        <blockquote data-en hidden>As long as its memories live, this effort shall live too.  <i class="ri-service-fill" style="color:rgb(14, 145, 14)"></i>
+</blockquote>
+        <div class="mgl-signature">
+          <span data-hi>एक छोटी-सी कोशिश... हमेशा के लिए।</span>
+          <span data-en hidden>A little effort... for generations.</span>
+          <span class="mgl-forever" style="color:#734425">Forever ❤️</span>
+        </div>
+      </div>
+    </div>
+        <div class="mgl-divider" aria-hidden="true"><svg viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M 0 30 Q 500 30 1000 30"></path></svg><span>✦</span></div>
+
+
+    <!-- BOLI & KAHAWATEIN -->
+
+
+
+    <!-- Community participation: FormSubmit sends submissions to the site owner -->
+    <section class="mgl-community" aria-labelledby="mglCommunityTitle">
+      <div class="mgl-community-head">
+        <span class="mgl-small-label" data-hi>यादों को आगे बढ़ाइए</span>
+        <span class="mgl-small-label" data-en hidden>LET THE MEMORIES LIVE ON</span>
+        <h2 id="mglCommunityTitle" data-hi>अब आपकी यादें भी इस कहानी का हिस्सा हैं।</h2>
+        <h2 data-en hidden>Your memories can become part of this story.</h2>
+        <p data-hi>अपने गाँव से जुड़ी कोई याद, कोई एहसास या आने वाली पीढ़ियों के नाम एक संदेश यहाँ छोड़िए। हर संदेश पहले समीक्षा के लिए भेजा जाएगा।</p>
+        <p data-en hidden>Leave a memory, a feeling, or a message for future generations. Every submission is reviewed before it can be published.</p>
+      </div>
+      <!-- Community presence / testimonial-style avatars -->
+<div class="mgl-memory-presence">
+
+  <div class="mgl-avatar-stack" aria-label="Community photo gallery">
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+    <div class="mgl-avatar">
+      <img src="imgs/contact.png" alt="Community member">
+    </div>
+
+  </div>
+
+  <p class="mgl-presence-caption" data-hi>
+    <strong>हर याद अनमोल है।</strong>
+    आप भी अपने गाँव की एक याद यहाँ छोड़िए। <i class="ri-camera-fill"></i>
+  </p>
+
+  <p class="mgl-presence-caption" data-en hidden>
+    <strong>Every memory matters.</strong>
+    Add your own village memory to this story. <i class="ri-camera-fill"></i>
+  </p>
+
+</div>
+
+      <div class="mgl-community-grid">
+        <form class="mgl-community-form" id="mglTimeCapsuleForm">
+          <span class="mgl-eyebrow"> DIGITAL TIME CAPSULE</span>
+          <h3 data-hi>भविष्य के नाम एक संदेश <i class="ri-chat-smile-2-fill"></i></h3><h3 data-en hidden>A Message to the Future <i class="ri-chat-smile-2-fill"></i></h3>
+          <p data-hi>आज के अपने शब्द आने वाले कल के लिए छोड़ जाइए।</p><p data-en hidden>Leave a few words from today for someone in the future.</p>
+          <label class="mgl-field"><span data-hi>आपका पूरा नाम *</span><span data-en hidden>Your Full Name *</span><input name="name" type="text" maxlength="70" autocomplete="name" placeholder="अपना नाम लिखें / Enter your name" required></label>
+          <label class="mgl-field"><span data-hi>गाँव / जगह *</span><span data-en hidden>Village / Place *</span><input name="place" type="text" maxlength="90" placeholder="Bhamori Khurd, Aligarh" required></label>
+          <label class="mgl-field"><span data-hi>यह संदेश किस तारीख के लिए है? *</span><span data-en hidden>When should this message be remembered? *</span><input name="future_date" type="date" required></label>
+          <label class="mgl-field"><span data-hi>आपका संदेश *</span><span data-en hidden>Your Message *</span><textarea name="message" minlength="10" maxlength="1800" placeholder="दिल से कुछ लिखिए... / Write from the heart..." required></textarea></label>
+          <label class="mgl-consent"><input type="checkbox" name="consent" value="Agreed" required><span data-hi>मैं पुष्टि करता/करती हूँ कि यह संदेश सम्मानजनक है और इसमें निजी या संवेदनशील जानकारी नहीं है। मैं समझता/समझती हूँ कि प्रकाशित करने से पहले इसकी समीक्षा होगी। *</span><span data-en hidden>I confirm this message is respectful, contains no private or sensitive information, and may be reviewed before publication. *</span></label>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <button class="mgl-submit" type="submit"><span data-hi>संदेश भेजें</span><span data-en hidden>Send Message</span><span aria-hidden="true"><i class="ri-send-ins-fill"></i></span></button>
+          <style>
+            .mgl-submit {
+    background: #e8d5ad;
+    color: #493b2b;
+    border: 1px solid #b99a68;
+    border-radius: 50px;
+    padding: 10px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin: 20px auto;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.mgl-submit:hover {
+    background: #dcc18e;
+    transform: translateY(-2px);
+}
+
+.mgl-submit:active {
+    transform: scale(.97);
+}
+
+@media (max-width: 480px) {
+    .mgl-submit {
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+}
+.mgl-submit {
+    background: #24452e;
+    color: #f5ead2;
+    border: 1px solid #b99a68;
+}
+
+.mgl-submit:hover {
+    background: #173b29;
+}
+          .mgl-submit i {
+    display: inline-block;
+    transition: transform .2s ease;
+}
+
+.mgl-submit:hover i {
+    color: #f2d18b;
+    transform: translate(2px, -2px) rotate(-65deg);
+       
+    
+}
+.mgl-submit:active i {
+    transform: scale(.9);
+}</style>
+          <p class="mgl-form-status" role="status" aria-live="polite"></p>
+          <div class="mgl-guideline" data-hi>
+    ❤️ आपके शब्द हमारे लिए अनमोल हैं। हर संदेश को ध्यान से पढ़ा जाएगा और उचित पाए जाने पर इस गाँव की यादों में जगह दी जाएगी।
+</div>
+
+<div class="mgl-guideline" data-en hidden>
+    ❤️ Your words mean a lot to us. Every message will be read with care, and selected messages may find a place in our village memories.
+</div>
+        </form>
+
+        <form class="mgl-community-form" id="mglGuestbookForm">
+          <span class="mgl-eyebrow"> VILLAGE GUESTBOOK </span>
+          <h3 data-hi>अपनी याद यहाँ छोड़िए <i class="ri-image-add-fill"></i></i></h3><h3 data-en hidden>Leave Your Village Memory <i class="ri-image-add-fill"></i> </h3>
+          <p data-hi>इस मिट्टी से जुड़ी आपकी सबसे प्यारी याद क्या है?</p><p data-en hidden>What is one of your most cherished memories of this place?</p>
+          <label class="mgl-field"><span data-hi>आपका पूरा नाम *</span><span data-en hidden>Your Full Name *</span><input name="name" type="text" maxlength="70" autocomplete="name" placeholder="अपना नाम लिखें / Enter your name" required></label>
+          <label class="mgl-field"><span data-hi>गाँव / जगह *</span><span data-en hidden>Village / Place *</span><input name="place" type="text" maxlength="90" placeholder="Bhamori Khurd, Aligarh" required></label>
+          <label class="mgl-field"><span data-hi>आपकी याद *</span><span data-en hidden>Your Memory *</span><textarea name="message" minlength="10" maxlength="1800" placeholder="अपनी याद साझा करें... / Share your memory..." required></textarea></label>
+          <label class="mgl-consent"><input type="checkbox" name="consent" value="Agreed" required><span data-hi>मैं सहमत हूँ कि मेरा नाम, जगह और संदेश समीक्षा के बाद इस Digital Legacy पर सार्वजनिक रूप से दिखाया जा सकता है। निजी जानकारी शामिल नहीं है। *</span><span data-en hidden>I agree that my name, place, and message may be publicly displayed on this Digital Legacy after review. It contains no private information. *</span></label>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
+          <button class="mgl-submit" type="submit"><span data-hi>याद साझा करें</span><span data-en hidden>Share Memory</span><span aria-hidden="true"><i class="ri-camera-ai-fill"></i></span></button>
+          <p class="mgl-form-status" role="status" aria-live="polite"></p>
+         <div class="mgl-guideline" data-hi>
+    ❤️ कृपया अपने संदेश में सम्मान और अपनापन बनाए रखें। केवल सच्चे, सभ्य और गाँव की गरिमा का सम्मान करने वाले संदेश ही साझा किए जाएँगे।
+</div>
+
+<div class="mgl-guideline" data-en hidden>
+    ❤️ Please keep your messages respectful and kind. Only genuine, appropriate submissions that honour our village and its community will be shared.
+</div>
+      </div>
+
+      <!-- <div class="mgl-wall">
+        <span class="mgl-small-label" style="display:block;text-align:center">THE MEMORY WALL</span>
+        <h3 data-hi>गाँव की साझा यादें</h3><h3 data-en hidden>Memories We Share</h3>
+        <p class="mgl-wall-intro" data-hi>यहाँ केवल समीक्षा के बाद स्वीकृत संदेश जोड़े जाएँगे।</p>
+        <p class="mgl-wall-intro" data-en hidden>Only reviewed and approved memories will be added here.</p>
+        <div class="mgl-approved-list" id="mglApprovedMemories">
+          Add approved messages here manually after reviewing the FormSubmit email.
+          <p class="mgl-review-note" data-hi>अभी कोई स्वीकृत संदेश नहीं है। आपकी याद इस Memory Wall की पहली कहानी बन सकती है।</p>
+          <p class="mgl-review-note" data-en hidden>No approved messages yet. Your memory could become the first story on this Memory Wall.</p>
+        </div>
+        <p class="mgl-review-note" data-hi>सुरक्षा और सम्मान के लिए हर नया संदेश पहले ईमेल पर समीक्षा हेतु भेजा जाता है। स्वीकृत संदेश वेबसाइट के इस Memory Wall में जोड़े जाएँगे।</p>
+        <p class="mgl-review-note" data-en hidden>For safety and respect, every new submission is emailed for review first. Approved messages can then be added to this website's Memory Wall.</p>
+      </div> -->
+    </section>
+
+   <button class="mgl-close-btn" id="mglCloseBtn" type="button">
+    <span data-hi>फिर मिलेंगे <i class="ri-hearts-fill" style="color:rgb(230, 25, 25)"></i></span>
+    <span data-en hidden>Meet Again <i class="ri-hearts-fill" style="color:rgb(230, 25, 25)"></i></span>
+    
+</button> <br>
+<p class="mgl-thankyou">
+    <span data-hi>🌸 इस सफ़र का हिस्सा बनने के लिए दिल से धन्यवाद! </span>
+    <span data-en hidden>🌸 Thank you for being part of this journey! </span>
+</p>
+
+<style>
+  .mgl-close-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 22px;
+    background: #f3ead8;
+    color: #493b2b;
+    border: 1px solid #b99a68;
+    border-radius: 50px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.mgl-close-btn:hover {
+    background: #e8dcc4;
+    border-color: #92764d;
+    transform: translateY(-2px);
+}
+
+.mgl-close-btn:active {
+    transform: scale(.97);
+}
+
+.mgl-close-btn:focus-visible {
+    outline: 2px solid #b99a68;
+    outline-offset: 4px;
+}
+.mgl-close-btn {
+    display: flex;
+    margin: 25px auto 0;
+    padding: 10px 22px;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #f3ead8;
+    color: #493b2b;
+    border: 1px solid #b99a68;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.mgl-close-btn:hover {
+    background: #e8dcc4;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+    .mgl-close-btn {
+        margin: 20px auto 0;
+        padding: 9px 18px;
+        font-size: 12px;
+    }
+}
+.mgl-thankyou {
+    text-align: center;
+    margin: 10px auto 0;
+    font-size: 11px;
+    color: #a58a60;
+    font-style: italic;
+    line-height: 1.5;
+}</style>
+
+ 
+  </div>
+
+
+</section>
+
+<!-- Load GSAP BEFORE the section script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+
+<script>
+(() => {
+  "use strict";
+
+  const section = document.querySelector("#mglLegacy");
+
+  if (!section || section.dataset.initialized === "true") return;
+  section.dataset.initialized = "true";
+
+  const gsap = window.gsap;
+  const ScrollTrigger = window.ScrollTrigger;
+
+  const openBtn = section.querySelector("#mglOpenBtn");
+  const closeBtn = section.querySelector("#mglCloseBtn");
+  const content = section.querySelector("#mglMainContent");
+  const languageButtons = section.querySelectorAll(".mgl-lang-btn");
+
+  const reducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const canAnimate = Boolean(gsap && !reducedMotion);
+  const canScrollTrigger = Boolean(gsap && ScrollTrigger);
+
+  let currentLanguage = "en";
+  let isOpen = false;
+  let storyContext = null;
+
+  if (canScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+  }
+
+  /* ==========================================
+     SAFE HELPERS
+  ========================================== */
+
+  function refreshScroll() {
+    if (canScrollTrigger) {
+      ScrollTrigger.refresh();
+    }
+  }
+
+  function animateIfExists(target, from, to) {
+    if (!canAnimate || !target) return;
+
+    gsap.fromTo(target, from, to);
+  }
+
+  function getVisibleLanguageElements(selector) {
+    return Array.from(section.querySelectorAll(selector)).filter(element => {
+      return !element.hidden;
+    });
+  }
+
+  /* ==========================================
+     LANGUAGE SWITCH
+  ========================================== */
+
+  function setLanguage(language) {
+    if (language !== "hi" && language !== "en") return;
+
+    currentLanguage = language;
+
+    section.querySelectorAll("[data-hi], [data-en]").forEach(element => {
+      element.hidden = !element.hasAttribute(`data-${language}`);
+    });
+
+    languageButtons.forEach(button => {
+      const active = button.dataset.lang === language;
+
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+
+    if (canAnimate) {
+      const visibleElements = getVisibleLanguageElements(
+        `[data-${language}]`
+      );
+
+      if (visibleElements.length) {
+        gsap.fromTo(
+          visibleElements,
+          {
+            autoAlpha: 0,
+            y: 8
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.35,
+            stagger: 0.008,
+            clearProps: "transform,opacity,visibility",
+            overwrite: "auto"
+          }
+        );
+      }
+    }
+
+    refreshScroll();
+  }
+
+  languageButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const language = button.dataset.lang;
+
+      if (language !== currentLanguage) {
+        setLanguage(language);
+      }
+    });
+  });
+
+  /* ==========================================
+     OPENING REVEAL ANIMATIONS
+  ========================================== */
+
+  if (canAnimate) {
+    const openingText = section.querySelector(".mgl-opening-text");
+    const openingVisual = section.querySelector(".mgl-opening-visual");
+
+    animateIfExists(
+      openingText,
+      { autoAlpha: 0, x: -45 },
+      {
+        autoAlpha: 1,
+        x: 0,
+        duration: 1.1,
+        ease: "power3.out",
+        scrollTrigger: canScrollTrigger
+          ? {
+              trigger: section,
+              start: "top 85%",
+              once: true
+            }
+          : undefined
+      }
+    );
+
+    animateIfExists(
+      openingVisual,
+      { autoAlpha: 0, x: 45, scale: 0.88 },
+      {
+        autoAlpha: 1,
+        x: 0,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: canScrollTrigger
+          ? {
+              trigger: section,
+              start: "top 85%",
+              once: true
+            }
+          : undefined
+      }
+    );
+
+    const floatingPhotos = [
+      {
+        selector: ".mgl-photo-main",
+        y: -12,
+        duration: 3.1
+      },
+      {
+        selector: ".mgl-photo-a",
+        y: 11,
+        rotation: 7,
+        duration: 3.6
+      },
+      {
+        selector: ".mgl-photo-b",
+        y: -9,
+        rotation: -7,
+        duration: 4
+      }
+    ];
+
+    floatingPhotos.forEach(item => {
+      const element = section.querySelector(item.selector);
+      if (!element) return;
+
+      gsap.to(element, {
+        y: item.y,
+        rotation: item.rotation || 0,
+        duration: item.duration,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      });
+    });
+
+    const orbitOne = section.querySelector(".mgl-orbit-one");
+    const orbitTwo = section.querySelector(".mgl-orbit-two");
+
+    if (orbitOne) {
+      gsap.to(orbitOne, {
+        rotation: 360,
+        duration: 38,
+        repeat: -1,
+        ease: "none"
+      });
+    }
+
+    if (orbitTwo) {
+      gsap.to(orbitTwo, {
+        rotation: -360,
+        duration: 52,
+        repeat: -1,
+        ease: "none"
+      });
+    }
+  }
+
+  /* ==========================================
+     POINTER BENDING DIVIDERS
+  ========================================== */
+
+  function initBendingDividers() {
+    if (!canAnimate) return;
+
+    section.querySelectorAll(".mgl-divider").forEach(divider => {
+      if (divider.dataset.bendReady === "true") return;
+
+      const path = divider.querySelector("path");
+      if (!path) return;
+
+      divider.dataset.bendReady = "true";
+
+      const point = {
+        x: 500,
+        y: 30
+      };
+
+      const draw = () => {
+        path.setAttribute(
+          "d",
+          `M 0 30 Q ${point.x} ${point.y} 1000 30`
+        );
+      };
+
+      divider.addEventListener("pointermove", event => {
+        if (event.pointerType === "touch") return;
+
+        const rect = divider.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+
+        const x =
+          ((event.clientX - rect.left) / rect.width) * 1000;
+
+        const y =
+          30 + (
+            (event.clientY - rect.top) / rect.height - 0.5
+          ) * 85;
+
+        gsap.to(point, {
+          x: Math.max(0, Math.min(1000, x)),
+          y: Math.max(-15, Math.min(75, y)),
+          duration: 0.28,
+          ease: "power3.out",
+          onUpdate: draw,
+          overwrite: "auto"
+        });
+      });
+
+      divider.addEventListener("pointerleave", () => {
+        gsap.to(point, {
+          x: 500,
+          y: 30,
+          duration: 0.85,
+          ease: "elastic.out(1,.42)",
+          onUpdate: draw,
+          overwrite: "auto"
+        });
+      });
+    });
+  }
+
+  initBendingDividers();
+
+  /* ==========================================
+     STORY ANIMATIONS
+  ========================================== */
+
+  function initStoryAnimations() {
+    if (!canAnimate || !content) return;
+
+    if (storyContext) {
+      storyContext.revert();
+      storyContext = null;
+    }
+
+    storyContext = gsap.context(() => {
+      const heading = content.querySelector(".mgl-content-heading");
+
+      if (heading) {
+        gsap.fromTo(
+          heading,
+          {
+            autoAlpha: 0,
+            y: 55
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1.1,
+            ease: "power3.out",
+            scrollTrigger: canScrollTrigger
+              ? {
+                  trigger: heading,
+                  start: "top 88%",
+                  once: true
+                }
+              : undefined
+          }
+        );
+      }
+
+      content.querySelectorAll(".mgl-story-row").forEach((row, index) => {
+        const image = row.querySelector(".mgl-story-image");
+        const photo = image?.querySelector("img");
+        const text = row.querySelector(".mgl-story-text");
+        const orbit = row.querySelector(".mgl-image-orbit");
+
+        if (!image || !text) return;
+
+        const direction = index % 2 === 0 ? -65 : 65;
+
+        gsap.fromTo(
+          image,
+          {
+            autoAlpha: 0,
+            x: direction,
+            scale: 0.72,
+            rotation: index % 2 === 0 ? -11 : 11
+          },
+          {
+            autoAlpha: 1,
+            x: 0,
+            scale: 1,
+            rotation: 0,
+            duration: 1.15,
+            ease: "power3.out",
+            scrollTrigger: canScrollTrigger
+              ? {
+                  trigger: row,
+                  start: "top 82%",
+                  once: true
+                }
+              : undefined
+          }
+        );
+
+        gsap.fromTo(
+          text,
+          {
+            autoAlpha: 0,
+            y: 55
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1.05,
+            delay: 0.12,
+            ease: "power3.out",
+            scrollTrigger: canScrollTrigger
+              ? {
+                  trigger: row,
+                  start: "top 82%",
+                  once: true
+                }
+              : undefined
+          }
+        );
+
+        if (orbit) {
+          gsap.to(orbit, {
+            rotation: index % 2 === 0 ? 360 : -360,
+            duration: 22 + index * 2,
+            repeat: -1,
+            ease: "none"
+          });
+        }
+
+        if (photo) {
+          gsap.fromTo(
+            photo,
+            {
+              scale: 1.18
+            },
+            {
+              scale: 1,
+              duration: 1.35,
+              ease: "power2.out",
+              scrollTrigger: canScrollTrigger
+                ? {
+                    trigger: row,
+                    start: "top 85%",
+                    once: true
+                  }
+                : undefined
+            }
+          );
+        }
+
+        /* Paragraph reveals */
+
+        const paragraphs = Array.from(
+          text.querySelectorAll("p")
+        ).filter(paragraph => !paragraph.hidden);
+
+        if (paragraphs.length) {
+          gsap.fromTo(
+            paragraphs,
+            {
+              autoAlpha: 0,
+              y: 22
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+              duration: 0.65,
+              stagger: 0.09,
+              ease: "power2.out",
+              scrollTrigger: canScrollTrigger
+                ? {
+                    trigger: row,
+                    start: "top 75%",
+                    once: true
+                  }
+                : undefined
+            }
+          );
+        }
+      });
+
+      /* Final legacy reveal */
+
+      const final = content.querySelector(".mgl-final");
+
+      if (final) {
+        const finalImage = final.querySelector(".mgl-final-image");
+        const finalText = final.querySelector(".mgl-final-text");
+
+        const finalElements = [finalImage, finalText].filter(Boolean);
+
+        if (finalElements.length) {
+          gsap.fromTo(
+            finalElements,
+            {
+              autoAlpha: 0,
+              y: 55,
+              scale: 0.94
+            },
+            {
+              autoAlpha: 1,
+              y: 0,
+              scale: 1,
+              duration: 1.1,
+              stagger: 0.18,
+              ease: "power3.out",
+              scrollTrigger: canScrollTrigger
+                ? {
+                    trigger: final,
+                    start: "top 82%",
+                    once: true
+                  }
+                : undefined
+            }
+          );
+        }
+      }
+    }, section);
+
+    refreshScroll();
+  }
+
+  /* ==========================================
+     OPEN LEGACY
+  ========================================== */
+
+  if (openBtn && content) {
+    openBtn.addEventListener("click", () => {
+      if (isOpen) return;
+
+      isOpen = true;
+      content.hidden = false;
+      openBtn.disabled = true;
+
+      const finishOpening = () => {
+        openBtn.disabled = false;
+        initStoryAnimations();
+        refreshScroll();
+      };
+
+      if (canAnimate) {
+        gsap.fromTo(
+          content,
+          {
+            autoAlpha: 0,
+            y: 28
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.85,
+            ease: "power3.out",
+            onComplete: finishOpening
+          }
+        );
+      } else {
+        finishOpening();
+      }
+    });
+  }
+
+  /* ==========================================
+     CLOSE LEGACY
+  ========================================== */
+
+  if (closeBtn && content) {
+    closeBtn.addEventListener("click", () => {
+      if (!isOpen) return;
+
+      isOpen = false;
+      closeBtn.disabled = true;
+
+      const hideContent = () => {
+        if (storyContext) {
+          storyContext.revert();
+          storyContext = null;
+        }
+
+        if (gsap) {
+          gsap.killTweensOf(content);
+          gsap.set(content, {
+            clearProps: "all"
+          });
+        }
+
+        content.hidden = true;
+        closeBtn.disabled = false;
+
+        section.scrollIntoView({
+          behavior: reducedMotion ? "auto" : "smooth",
+          block: "start"
+        });
+
+        refreshScroll();
+      };
+
+      if (canAnimate) {
+        gsap.to(content, {
+          autoAlpha: 0,
+          y: 18,
+          duration: 0.35,
+          ease: "power2.in",
+          onComplete: hideContent
+        });
+      } else {
+        hideContent();
+      }
+    });
+  }
+
+  /* ==========================================
+     FORMSUBMIT — DIRECT POST
+     Both forms → Site owner's email
+  ========================================== */
+
+  const formSubmitEndpoint =
+    "https://formsubmit.co/ydvaman2326@gmail.com";
+
+  const forms = section.querySelectorAll(
+    "#mglTimeCapsuleForm, #mglGuestbookForm"
+  );
+
+  forms.forEach(form => {
+    form.action = formSubmitEndpoint;
+    form.method = "POST";
+
+    /* Generate hidden FormSubmit fields */
+
+    function setHiddenField(name, value) {
+      let field = form.querySelector(
+        `input[name="${name}"][data-mgl-generated="true"]`
+      );
+
+      if (!field) {
+        field = document.createElement("input");
+        field.type = "hidden";
+        field.name = name;
+        field.dataset.mglGenerated = "true";
+        form.appendChild(field);
+      }
+
+      field.value = value;
+    }
+
+    form.addEventListener("submit", event => {
+      if (!form.reportValidity()) {
+        event.preventDefault();
+        return;
+      }
+
+      const formData = new FormData(form);
+
+      /* Honeypot spam protection */
+
+      if (formData.get("_honey")) {
+        event.preventDefault();
+        return;
+      }
+
+      const isCapsule =
+        form.id === "mglTimeCapsuleForm";
+
+      const name =
+        String(formData.get("name") || "Village Visitor").trim();
+
+      /* FormSubmit email settings */
+
+      setHiddenField(
+        "_subject",
+        isCapsule
+          ? `Digital Time Capsule — ${name}`
+          : `Village Guestbook Memory — ${name}`
+      );
+
+      setHiddenField("_template", "table");
+      setHiddenField("_captcha", "false");
+
+      setHiddenField(
+        "submission_type",
+        isCapsule
+          ? "Digital Time Capsule"
+          : "Village Guestbook"
+      );
+
+      /* Status feedback */
+
+      const status = form.querySelector(".mgl-form-status");
+      const button = form.querySelector(".mgl-submit");
+
+      if (status) {
+        status.className = "mgl-form-status";
+
+        status.textContent =
+          currentLanguage === "hi"
+            ? "आपका संदेश भेजा जा रहा है..."
+            : "Sending your message...";
+      }
+
+      if (button) {
+        button.disabled = true;
+
+        button.textContent =
+          currentLanguage === "hi"
+            ? "भेजा जा रहा है..."
+            : "Sending...";
+      }
+
+      /*
+        Direct POST:
+        Do not preventDefault here.
+        Browser submits the form to FormSubmit.
+      */
+    });
+  });
+
+  /* ==========================================
+     INITIAL LANGUAGE
+  ========================================== */
+
+  setLanguage("en");
+
+})();
+</script>
+
+
+
+
+
+</body>
+</html>
