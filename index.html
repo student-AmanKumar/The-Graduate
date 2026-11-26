@@ -1628,16 +1628,13 @@ document.addEventListener("DOMContentLoaded", () => {
     box-sizing: border-box;
     padding-inline: 8px;
 ">
-    THREE YEARS • ONE JOURNEY • A FUTURE
+  
+THREE YEARS • ONE JOURNEY • A LIFETIME OF MEMORIES
 </div>
 
-                        <p>
-                            Welcome to my BCA journey — three years of learning,
-                            challenges, friendships, and unforgettable memories.
-                            Explore the experiences, projects, milestones, and
-                            lessons that shaped my growth as a developer.
-                        </p>
-
+                   <p> Welcome to my BCA journey — three years of learning, struggles, happiness, friendships, and unforgettable memories. Every moment has shaped a part of who I am today. This is a small effort to bring my real-life journey into a digital space, keeping every memory alive.
+<br> 
+Some chapters deserve to be lived twice once in reality, and forever in memories.</p>
                      
 <a href="javascript:void(0)"
    class="btn radius village-enter-btn"
@@ -2518,7 +2515,7 @@ window.addEventListener("load", () => {
   </div>
 
   <div class="bkv-orbit-caption" aria-live="polite">
-    <span class="bkv-orbit-count">01 <i>/ 40</i></span>
+    <span class="bkv-orbit-count" style="color:#7d4621">01 <i>/ 40</i></span>
     <h3 class="bkv-orbit-title">The Beginning</h3>
     <p class="bkv-orbit-description">Every journey starts with a first step.</p>
   </div>
@@ -2563,6 +2560,17 @@ window.addEventListener("load", () => {
     width: 78%;
     height: 65px;
   }
+}
+/* hide logo  */
+.bkv-orbit-college-mark {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.bkv-orbit-college-mark.is-visible {
+  opacity: 1;
+  visibility: visible;
 }
   </style>
   <script>
@@ -2689,26 +2697,93 @@ window.addEventListener("load", () => {
   /* =========================================
      BCA COLLEGE MEMORIES — 30 PHOTOS
   ========================================= */
-
-  const photos = [
-    { image: "imgs/linkedinn-removebg-preview (1) copy.png", title: "The Beginning", description: "Every great journey begins with a first step." },
-    { image: "imgs/about/main.png", title: "Friends & Memories", description: "The people who made college life special." },
-    { image: "imgs/about/2.jpeg", title: "Campus Life", description: "Little moments that became lasting memories." },
-    { image: "imgs/about/3.jpeg", title: "Classroom Days", description: "Learning new things and building new dreams." },
-    { image: "imgs/about/01.jpeg", title: "Our Campus", description: "A familiar place filled with unforgettable stories." },
-    { image: "imgs/about/06.jpeg", title: "The College Gang", description: "Good friends make ordinary days extraordinary." },
-    { image: "imgs/about/6.png", title: "Study Sessions", description: "Learning, sharing ideas and growing together." },
-    { image: "imgs/about/08.png", title: "A Day to Remember", description: "One special day, a lifetime of memories." },
-    { image: "imgs/about/22.jpeg", title: "College Adventures", description: "The best stories often happen unexpectedly." },
-    { image: "imgs/about/10.jpeg", title: "Smiles & Stories", description: "Every picture brings back a beautiful moment." },
-    { image: "imgs/about/friend1.jpeg", title: "Campus Friends", description: "Different personalities, one memorable journey." },
-    { image: "imgs/about/last1.jpeg", title: "Between Classes", description: "The little breaks became some of our best memories." },
-    { image: "imgs/about/main.png", title: "Team Moments", description: "Together we learned, laughed and moved forward." },
-    { image: "imgs/about/66.jpeg", title: "Team Moments", description: "Together we learned, laughed and moved forward." },
-
-    
-    
-  ];
+const photos = [
+  {
+    image: "imgs/linkedinn-removebg-preview (1) copy.png",
+    title: "The Beginning",
+    description: "Every great journey begins with a first step towards dreams and beautiful memories."
+  },
+  {
+    image: "imgs/about/2.png",
+    title: "Tour Memories",
+    description: "A wonderful day filled with laughter, friendship, fun, and unforgettable shared experiences."
+  },
+  {
+    image: "imgs/about/3.jpeg",
+    title: "College Building",
+    description: "The place where my college journey began and countless beautiful memories were created."
+  },
+  {
+    image: "imgs/about/friend1.png",
+    title: "Campus Friends",
+    description: "Sharing smiles, laughter, and special moments that made my college days truly memorable."
+  },
+  {
+    image: "imgs/about/last.jpeg",
+    title: "Final Moments",
+    description: "A solo moment filled with emotions, memories, and reflections from my final college day."
+  },
+  {
+    image: "imgs/about/01.jpeg",
+    title: "College Memories",
+    description: "A special campus moment capturing my style, personality, and beautiful college memories."
+  },
+  {
+    image: "imgs/about/06.jpeg",
+    title: "Vaishno Devi",
+    description: "A memorable journey filled with friendship, devotion, beautiful views, and unforgettable experiences."
+  },
+{
+  image: "imgs/about/6.png",
+  title: "Our University",
+  description: "A special university that shaped my BCA journey and became part of countless unforgettable memories."
+},
+ {
+  image: "imgs/about/08.png",
+  title: "Campus Fun",
+  description: "A playful moment on campus, making ordinary college days more joyful and memorable."
+},
+{
+  image: "imgs/about/022.png",
+  title: "Prem Mandir",
+  description: "Beautiful cranes at Prem Mandir, adding charm and grace to its peaceful surroundings."
+},
+{
+  image: "imgs/about/010.png",
+  title: "Mandir Memories",
+  description: "Another beautiful moment at Prem Mandir, capturing its charm and peaceful atmosphere."
+},
+  {
+  image: "imgs/about/me1.png",
+  title: "Krishna Moments",
+  description: "A beautiful moment with Lord Krishna, reflecting devotion, faith, and a sense of inner peace."
+},
+{
+  image: "imgs/about/friend2.png",
+  title: "College Friends",
+  description: "Sitting together with college friends, sharing laughter, conversations, and memories that will stay forever."
+},
+  {
+    image: "imgs/about/last1.jpeg",
+    title: "College Farewell",
+    description: "One final day together, filled with smiles, emotions, friendship, and unforgettable memories."
+  },
+  {
+    image: "imgs/about/main.png",
+    title: "Entrance Selfie",
+    description: "A memorable selfie at my college entrance, capturing a special journey milestone."
+  },
+  {
+    image: "imgs/about/66.jpeg",
+    title: "Prem Memories",
+    description: "Exploring Prem Mandir, capturing beautiful moments that will stay with me forever."
+  },
+  {
+    image: "imgs/about/more.png",
+    title: "Explore More",
+    description: "Discover more photographs, explore beautiful moments, and relive my college journey ahead."
+  }
+];
 
   /* ELEMENTS */
 
@@ -3044,6 +3119,27 @@ window.addEventListener("load", () => {
 
     observer.observe(heading);
 })();
+
+
+// hide logo gcmt
+document.addEventListener("DOMContentLoaded", () => {
+  const logo = document.querySelector(".bkv-orbit-college-mark");
+
+  if (!logo) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        logo.classList.add("is-visible");
+        observer.unobserve(logo);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  observer.observe(logo);
+});
 </script>
 
 
@@ -3085,9 +3181,9 @@ window.addEventListener("load", () => {
 <div class="mi-sign mi-reveal">
   <strong>
     Whatever I achieve in life, a part of it will
-    always belong to you.
+    always belong to you
   </strong>
-  <span >MY PARENTS. MY BROTHERS. MY GREATEST BLESSING.</span>
+  <span >MY FAMILY.  MY GREATEST BLESSING.</span>
 </div>
 
 
@@ -3117,8 +3213,8 @@ window.addEventListener("load", () => {
 
         
 <h2 class="mi-reveal">
-  More Than A Brother.
-  <em style="color:#734425">My Biggest Inspiration.</em>
+  More Than A Brother
+  <em style="color:#734425">My Biggest Inspiration</em>
 </h2>
 
 <p class="mi-reveal">
@@ -3750,6 +3846,22 @@ window.addEventListener("load", () => {
     margin: 35px auto;
   }
 
+}
+@media (max-width: 600px) {
+  .mi-reveal {
+    font-size: clamp(30px, 8vw, 40px);
+    line-height: 1.15;
+    text-align: center;
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+
+  .mi-reveal em {
+    display: block;
+    font-size: 0.82em;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
 }
 </style>
 
@@ -4907,361 +5019,285 @@ function initFlyingHeading() {
   }
 
 }
-
+#firstCollegeDay .fcd-story-line {
+  transform-origin: top center;
+  will-change: transform, filter;
+  background: linear-gradient(
+    to bottom,
+    #b99555 0%,
+    #d9bd83 45%,
+    #734425 100%
+  );
+}
 </style>
 
 <script>
-
+  
 (() => {
+  "use strict";
 
   function initFirstCollegeDay() {
-
     const section = document.getElementById("firstCollegeDay");
 
     if (!section || section.dataset.fcdReady === "true") return;
+
+    if (!window.gsap || !window.ScrollTrigger) {
+      console.warn("First College Day: GSAP / ScrollTrigger missing.");
+      return;
+    }
+
     section.dataset.fcdReady = "true";
 
-    /* =====================================
-       EDIT ADMISSION DATE
-    ===================================== */
+    const gs = window.gsap;
+    const ST = window.ScrollTrigger;
+
+    gs.registerPlugin(ST);
+
+    const $ = selector => section.querySelector(selector);
+
+    /* DATE */
 
     const admissionDate = "2023-07-14";
     const date = new Date(admissionDate + "T12:00:00");
 
     if (!Number.isNaN(date.getTime())) {
-
-      section.querySelector("#fcdDay").textContent =
-        String(date.getDate()).padStart(2, "0");
-
-      section.querySelector("#fcdMonth").textContent =
+      $("#fcdDay").textContent = String(date.getDate()).padStart(2, "0");
+      $("#fcdMonth").textContent =
         date.toLocaleString("en-US", { month: "long" }).toUpperCase();
-
-      section.querySelector("#fcdYear").textContent =
-        date.getFullYear();
-
-      section.querySelector("#fcdWeekday").textContent =
+      $("#fcdYear").textContent = date.getFullYear();
+      $("#fcdWeekday").textContent =
         date.toLocaleString("en-US", { weekday: "long" }).toUpperCase();
-
     }
 
-    /* =====================================
-       GSAP CHECK
-    ===================================== */
+    /* ELEMENTS */
 
-    if (!window.gsap || !window.ScrollTrigger) {
-      console.warn("GSAP or ScrollTrigger is missing.");
-      return;
-    }
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const $ = (selector) => section.querySelector(selector);
-
-    const eyebrow = $(".fcd-eyebrow");
     const topline = $(".fcd-topline");
-    const intro = $(".fcd-intro");
-
-    const titleLine1 = $(
-      ".fcd-title-line:nth-child(1) .fcd-title-inner"
-    );
-
-    const titleLine2 = $(
-      ".fcd-title-line:nth-child(2) .fcd-title-inner"
-    );
-
+    const titleLine1 = $(".fcd-title-line:nth-child(1) .fcd-title-inner");
+    const titleLine2 = $(".fcd-title-line:nth-child(2) .fcd-title-inner");
     const dateArea = $(".fcd-date-area");
     const story = $(".fcd-story");
+    const storyParagraphs = gs.utils.toArray(".fcd-story p", section);
     const storyLine = $(".fcd-story-line");
-
     const stamp = $(".fcd-stamp");
     const profile = $(".fcd-profile");
     const star = $(".fcd-stamp-star");
-
     const bottom = $(".fcd-bottom");
 
     if (
-      !eyebrow || !topline || !intro ||
       !titleLine1 || !titleLine2 ||
       !dateArea || !story || !storyLine ||
       !stamp || !profile || !star || !bottom
-    ) return;
+    ) {
+      console.warn("First College Day: Required section elements missing.");
+      return;
+    }
 
+    /* CLEAN OLD SECTION TRIGGERS */
 
-    /* =====================================
-       INITIAL STATES
-    ===================================== */
+    ST.getAll().forEach(trigger => {
+      if (
+        trigger.trigger === section ||
+        (trigger.trigger && section.contains(trigger.trigger))
+      ) {
+        trigger.kill();
+      }
+    });
 
-    gsap.set(
-      [eyebrow, topline, intro, dateArea, story, bottom],
-      { autoAlpha: 0 }
-    );
+    /* INITIAL STATES */
 
-    gsap.set(eyebrow, { y: -20 });
-    gsap.set(topline, { y: -15 });
-    gsap.set(intro, { y: 20 });
-
-    gsap.set([titleLine1, titleLine2], {
-      yPercent: 115,
+    gs.set([topline, dateArea, story, bottom].filter(Boolean), {
       autoAlpha: 0
     });
 
-    gsap.set(dateArea, { y: 35 });
-    gsap.set(story, { y: 40 });
-
-    gsap.set(storyLine, {
-      scaleY: 0,
-      transformOrigin: "top"
+    gs.set([titleLine1, titleLine2], {
+      yPercent: 110,
+      autoAlpha: 0
     });
 
-    /* COMPLETE ADMISSION SEAL HIDDEN */
+    gs.set(dateArea, { y: 35 });
+    gs.set(story, { y: 35 });
 
-    gsap.set(stamp, {
+    gs.set(storyParagraphs, {
+      y: 22,
+      autoAlpha: 0
+    });
+
+    gs.set(storyLine, {
+      scaleY: 0,
+      transformOrigin: "top center"
+    });
+
+    gs.set(stamp, {
+      autoAlpha: 0,
+      scale: .65,
+      rotation: 12
+    });
+
+    gs.set(profile, {
       autoAlpha: 0,
       scale: .5,
-      rotation: 15
+      rotation: -45
     });
 
-    gsap.set(profile, {
-      autoAlpha: 0,
-      scale: .4,
-      rotation: -90
-    });
-
-    gsap.set(star, {
+    gs.set(star, {
       autoAlpha: 0,
       scale: 0,
       rotation: -60
     });
 
-    gsap.set(bottom, { y: 20 });
+    gs.set(bottom, { y: 20 });
 
+    /* MAIN SCRUB TIMELINE */
 
-    /* =====================================
-       MAIN SECTION TIMELINE
-    ===================================== */
-
-    const tl = gsap.timeline({
-      paused: true,
+    const tl = gs.timeline({
       defaults: {
         ease: "power3.out"
+      },
+      scrollTrigger: {
+        trigger: section,
+        start: "top 82%",
+        end: "bottom 18%",
+        scrub: 1.15,
+        invalidateOnRefresh: true
       }
     });
 
-    tl
+    /* OPTIONAL TOPLINE */
 
-      .to(eyebrow, {
-        y: 0,
+    if (topline && topline.children.length) {
+      tl.to(topline, {
         autoAlpha: 1,
+        y: 0,
         duration: .65
-      })
+      }, 0);
+    }
 
-      .to(topline, {
-        y: 0,
-        autoAlpha: 1,
-        duration: .65
-      }, "-=.3")
+    /* HEADING */
 
-      .to(intro, {
-        y: 0,
-        autoAlpha: 1,
-        duration: .7
-      }, "-=.2")
+    tl.to(titleLine1, {
+      yPercent: 0,
+      autoAlpha: 1,
+      duration: 1,
+      ease: "power4.out"
+    }, .1);
 
+    tl.to(titleLine2, {
+      yPercent: 0,
+      autoAlpha: 1,
+      duration: 1.1,
+      ease: "power4.out"
+    }, .35);
 
-      /* HEADING LINE 1 */
+    /* DATE */
 
-      .to(titleLine1, {
-        yPercent: 0,
-        autoAlpha: 1,
-        duration: 1.1,
-        ease: "power3.out"
-      }, "-=.1")
+    tl.to(dateArea, {
+      autoAlpha: 1,
+      y: 0,
+      duration: .8
+    }, .85);
 
+    /* STORY */
 
-      /* HEADING LINE 2 */
+    tl.to(story, {
+      autoAlpha: 1,
+      y: 0,
+      duration: .7
+    }, 1.2);
 
-      .to(titleLine2, {
-        yPercent: 0,
-        autoAlpha: 1,
-        duration: 1.3,
-        ease: "power3.out"
-      }, "-=.35")
+    tl.to(storyParagraphs, {
+      autoAlpha: 1,
+      y: 0,
+      duration: .7,
+      stagger: .18,
+      ease: "power3.out"
+    }, 1.35);
 
+    /* SIDE STORY LINE — DRAW + LIGHT REVEAL */
 
-      /* DATE */
+    tl.to(storyLine, {
+      scaleY: 1,
+      duration: 1.7,
+      ease: "power2.inOut"
+    }, 1.15);
 
-      .to(dateArea, {
-        y: 0,
-        autoAlpha: 1,
-        duration: .8
-      }, "-=.15")
+    /* ADMISSION SEAL */
 
+    tl.to(stamp, {
+      autoAlpha: 1,
+      scale: 1,
+      rotation: -5,
+      duration: .9,
+      ease: "back.out(1.5)"
+    }, 2.45);
 
-      /* STORY */
+    tl.to(profile, {
+      autoAlpha: 1,
+      scale: 1,
+      rotation: 0,
+      duration: .7,
+      ease: "back.out(2)"
+    }, 2.85);
 
-      .to(story, {
-        y: 0,
-        autoAlpha: 1,
-        duration: .9
-      }, "-=.2")
+    tl.to(star, {
+      autoAlpha: 1,
+      scale: 1,
+      rotation: 0,
+      duration: .6,
+      ease: "back.out(2)"
+    }, 3.05);
 
-      .to(storyLine, {
-        scaleY: 1,
-        duration: 1,
-        ease: "power2.out"
-      }, "-=.55")
+    /* BOTTOM */
 
+    tl.to(bottom, {
+      autoAlpha: 1,
+      y: 0,
+      duration: .7
+    }, 3.3);
 
-      /* BOTTOM */
+    /* SIDE LINE LIGHT SWEEP */
 
-      .to(bottom, {
-        y: 0,
-        autoAlpha: 1,
-        duration: .7
-      }, "-=.2");
+    // A small moving highlight follows the drawn line.
+    // This is tied to scroll progress, so it reverses naturally.
+    let lineGlow = null;
 
+    if (storyLine) {
+      lineGlow = gs.fromTo(
+        storyLine,
+        {
+          filter: "brightness(1)",
+          boxShadow: "0 0 0px rgba(185,149,85,0)"
+        },
+        {
+          filter: "brightness(1.55)",
+          boxShadow: "0 0 12px rgba(185,149,85,.35)",
+          duration: 1,
+          ease: "none",
+          paused: true
+        }
+      );
 
-    /* =====================================
-       MAIN SECTION SCROLL
-       REPLAY + REVERSE
-    ===================================== */
+      tl.add(lineGlow, 1.35);
+    }
 
-    ScrollTrigger.create({
-
-      trigger: section,
-
-      start: "top 80%",
-      end: "bottom 20%",
-
-      onEnter: () => {
-        tl.restart();
-      },
-
-      onLeave: () => {
-        tl.reverse();
-      },
-
-      onEnterBack: () => {
-        tl.restart();
-      },
-
-      onLeaveBack: () => {
-        tl.reverse();
-      }
-
-    });
-
-
-    /* =====================================
-       COMPLETE ADMISSION CONFIRMED SEAL
-       ANIMATE ONLY WHEN IT REACHES VIEW
-    ===================================== */
-
-    const admissionSeal = gsap.timeline({
-      paused: true
-    });
-
-    admissionSeal
-
-      /* CIRCLE SEAL */
-
-      .to(stamp, {
-        autoAlpha: 1,
-        scale: 1,
-        rotation: -9,
-        duration: 1,
-        ease: "back.out(1.8)"
-      })
-
-      /* YOUR PHOTO */
-
-      .to(profile, {
-        autoAlpha: 1,
-        scale: 1,
-        rotation: 0,
-        duration: .8,
-        ease: "back.out(2)"
-      }, "-=.35")
-
-      /* STAR */
-
-      .to(star, {
-        autoAlpha: 1,
-        scale: 1,
-        rotation: 0,
-        duration: .6,
-        ease: "back.out(2)"
-      }, "-=.4");
-
-
-    /* =====================================
-       SEAL SCROLL TRIGGER
-       REPLAY + REVERSE
-    ===================================== */
-
-    ScrollTrigger.create({
-
-      trigger: stamp,
-
-      start: "top 80%",
-      end: "bottom 20%",
-
-      onEnter: () => {
-        admissionSeal.restart();
-      },
-
-      onLeave: () => {
-        admissionSeal.reverse();
-      },
-
-      onEnterBack: () => {
-        admissionSeal.restart();
-      },
-
-      onLeaveBack: () => {
-        admissionSeal.reverse();
-      }
-
-    });
-
-
-    /* =====================================
-       REFRESH AFTER IMAGE LOAD
-    ===================================== */
+    /* REFRESH */
 
     const img = profile.querySelector("img");
 
     if (img && !img.complete) {
-
-      img.addEventListener("load", () => {
-        ScrollTrigger.refresh();
-      }, { once: true });
-
+      img.addEventListener("load", () => ST.refresh(), { once: true });
     }
 
-    ScrollTrigger.refresh();
-
+    requestAnimationFrame(() => ST.refresh());
   }
-
 
   if (document.readyState === "loading") {
-
-    document.addEventListener(
-      "DOMContentLoaded",
-      initFirstCollegeDay
-    );
-
+    document.addEventListener("DOMContentLoaded", initFirstCollegeDay);
   } else {
-
     initFirstCollegeDay();
-
   }
-
 })();
 
 </script>
-
-
 
 
 <section id="momentRemember">
@@ -7022,6 +7058,7 @@ function initFlyingHeading() {
   stroke-width: 2.5;
   stroke-linecap: round;
   stroke-linejoin: round;
+  
 }</style>
 
 <script>
@@ -7263,8 +7300,6 @@ function initFlyingHeading() {
 
   <i>Dreams Discovered.</i>
 
-  <span>Memories Made.</span>
-  <i>Forever Remembered.</i>
 </div>
 
 
@@ -7473,6 +7508,12 @@ function initFlyingHeading() {
     padding: 20px 6%;
     font-size: 8px;
     letter-spacing: 1.5px;
+  }
+}
+/* hide in mobile */
+@media (max-width: 768px) {
+  #bca-marquee-story {
+    display: none !important;
   }
 }
 
@@ -19572,6 +19613,7 @@ document.addEventListener("DOMContentLoaded", () => {
     0 100%, 0 18%, 12% 0
   );
 }
+
 </style>
 
 <script>
@@ -20059,6 +20101,149 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   elements.forEach(element => observer.observe(element));
+})();
+(() => {
+  "use strict";
+
+  function initFriendsFlow() {
+    const container = document.getElementById("fmFriendsTrigger");
+
+    if (!container || container.dataset.flowReady === "true") return;
+    if (!window.gsap) return;
+
+    const gs = window.gsap;
+
+    const buttons = gs.utils.toArray(
+      ".fm-trigger-img:not(.fm-trigger-more)",
+      container
+    );
+
+    if (buttons.length !== 3) return;
+
+    // Collect only friends folder images
+    const galleryImages = Array.from(document.querySelectorAll("img"))
+      .map(img => ({
+        src: img.getAttribute("src"),
+        alt: img.getAttribute("alt") || "Friendship memory"
+      }))
+      .filter(item => {
+        if (!item.src) return false;
+
+        return /(^|\/)imgs\/friends\/[^/]+$/i.test(
+          item.src.replace(/\\/g, "/")
+        );
+      })
+      .filter((item, index, arr) =>
+        arr.findIndex(other => other.src === item.src) === index
+      );
+
+    if (galleryImages.length <= 3) return;
+
+    const imgs = buttons.map(button => button.querySelector("img"));
+    if (imgs.some(img => !img)) return;
+
+    container.dataset.flowReady = "true";
+
+    let current = 0;
+    let photoIndex = 3;
+    let isAnimating = false;
+
+    gs.set(buttons, {
+      transformOrigin: "center center",
+      willChange: "transform, opacity"
+    });
+
+    buttons.forEach((button, index) => {
+      button.classList.toggle("active", index === 0);
+
+      gs.set(button, {
+        scale: index === 0 ? 1.12 : .88,
+        y: index === 0 ? -5 : 3,
+        autoAlpha: index === 0 ? 1 : .72,
+        zIndex: index === 0 ? 5 : 1
+      });
+    });
+
+    function nextImage() {
+      if (isAnimating) return;
+
+      isAnimating = true;
+
+      const outgoing = buttons[current];
+      const nextIndex = (current + 1) % buttons.length;
+      const incoming = buttons[nextIndex];
+
+      const nextPhoto = galleryImages[photoIndex];
+      const preload = new Image();
+
+      preload.onload = () => {
+        incoming.querySelector("img").src = nextPhoto.src;
+        incoming.querySelector("img").alt = nextPhoto.alt;
+
+        incoming.classList.add("active");
+
+        gs.set(incoming, {
+          zIndex: 6,
+          scale: .55,
+          y: 12,
+          autoAlpha: 0
+        });
+
+        gs.timeline({
+          onComplete: () => {
+            outgoing.classList.remove("active");
+
+            gs.set(outgoing, {
+              zIndex: 1,
+              scale: .88,
+              y: 3,
+              autoAlpha: .72
+            });
+
+            gs.set(incoming, {
+              zIndex: 5,
+              scale: 1.12,
+              y: -5,
+              autoAlpha: 1
+            });
+
+            current = nextIndex;
+            photoIndex = (photoIndex + 1) % galleryImages.length;
+            isAnimating = false;
+          }
+        })
+        .to(outgoing, {
+          scale: .72,
+          y: -12,
+          autoAlpha: .25,
+          duration: .65,
+          ease: "power2.inOut"
+        }, 0)
+        .to(incoming, {
+          scale: 1.12,
+          y: -5,
+          autoAlpha: 1,
+          duration: .85,
+          ease: "power3.out"
+        }, .12);
+      };
+
+      preload.onerror = () => {
+        photoIndex = (photoIndex + 1) % galleryImages.length;
+        isAnimating = false;
+      };
+
+      preload.src = nextPhoto.src;
+    }
+
+    window.setInterval(nextImage, 2200);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initFriendsFlow);
+  } else {
+    initFriendsFlow();
+  }
 })();
 </script>
 
@@ -22944,6 +23129,8 @@ document.addEventListener("DOMContentLoaded", () => {
     aspect-ratio: 1 / 1 !important;
   }
 }
+/* update more 3 imgs */
+
 </style>
 
 <script>
@@ -23585,6 +23772,105 @@ document.addEventListener("DOMContentLoaded", () => {
   isOpen = false;
   isClosing = false;
 
+})();
+// upadet 3 imgs
+(() => {
+  "use strict";
+
+  function initMJGalleryFlow() {
+    const container = document.querySelector(".mj-more");
+
+    if (!container || container.dataset.galleryFlowReady === "true") return;
+
+    const thumbs = Array.from(container.querySelectorAll(".mj-thumb"));
+    if (thumbs.length !== 3 || !window.gsap) return;
+
+    const gs = window.gsap;
+
+    // Only imgs/me/ folder images
+    const galleryImages = Array.from(document.querySelectorAll("img"))
+      .map(img => ({
+        src: img.getAttribute("src"),
+        alt: img.getAttribute("alt") || "My photo"
+      }))
+      .filter(item => {
+        if (!item.src) return false;
+
+        const src = item.src.replace(/\\/g, "/");
+        return /(^|\/)imgs\/me\/[^/]+$/i.test(src);
+      });
+
+    // Remove duplicate image paths
+    const uniqueImages = galleryImages.filter(
+      (item, index, arr) =>
+        arr.findIndex(other => other.src === item.src) === index
+    );
+
+    if (uniqueImages.length <= 3) return;
+
+    container.dataset.galleryFlowReady = "true";
+
+    let photoIndex = 3;
+    let activeThumb = 0;
+    let busy = false;
+
+    function changePhoto(thumb) {
+      const img = thumb.querySelector("img");
+      if (!img || busy) return;
+
+      busy = true;
+
+      const nextPhoto = uniqueImages[photoIndex];
+      const preload = new Image();
+
+      preload.onload = () => {
+        gs.to(img, {
+          autoAlpha: 0,
+          scale: 0.96,
+          duration: 0.7,
+          ease: "power2.inOut",
+          onComplete: () => {
+            img.src = nextPhoto.src;
+            img.alt = nextPhoto.alt;
+
+            gs.fromTo(img,
+              { autoAlpha: 0, scale: 1.04 },
+              {
+                autoAlpha: 1,
+                scale: 1,
+                duration: 1.1,
+                ease: "power2.out",
+                onComplete: () => {
+                  photoIndex = (photoIndex + 1) % uniqueImages.length;
+                  busy = false;
+                }
+              }
+            );
+          }
+        });
+      };
+
+      preload.onerror = () => {
+        photoIndex = (photoIndex + 1) % uniqueImages.length;
+        busy = false;
+      };
+
+      preload.src = nextPhoto.src;
+    }
+
+    window.setInterval(() => {
+      if (busy) return;
+
+      changePhoto(thumbs[activeThumb]);
+      activeThumb = (activeThumb + 1) % thumbs.length;
+    }, 2800);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMJGalleryFlow);
+  } else {
+    initMJGalleryFlow();
+  }
 })();
 </script>
 
@@ -24293,8 +24579,8 @@ document.addEventListener("DOMContentLoaded", () => {
       </span>
 
       <h2 class="bcm29-title bcm29-reveal">
-        Sweet moments,<br>
-        <em>forever memories.</em>
+        Sweet 
+        <em>Moments</em>
       </h2>
 
      <p class="bcm29-description bcm29-reveal">
@@ -24353,26 +24639,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <!-- MAIN ICE CREAM PHOTO -->
       <div class="bcm29-circle bcm29-circle-one bcm29-reveal">
-        <img src="imgs/lovemoments/03.png"
+        <img src="imgs/lovemoments/004.png"
              alt="Ice cream moment with my friend"
              loading="lazy">
       </div>
 
       <!-- OTHER MEMORIES -->
       <div class="bcm29-circle bcm29-circle-two bcm29-reveal">
-        <img src="imgs/lovemoments/1.png"
+        <img src="imgs/lovemoments/01.png"
              alt="A happy memory with friends"
              loading="lazy">
       </div>
 
       <div class="bcm29-circle bcm29-circle-three bcm29-reveal">
-        <img src="imgs/lovemoments/02.png"
+        <img src="imgs/lovemoments/002.png"
              alt="A special day together"
              loading="lazy">
       </div>
 
       <div class="bcm29-circle bcm29-circle-four bcm29-reveal">
-        <img src="imgs/lovemoments/04.png"
+        <img src="imgs/lovemoments/003.png"
              alt="A little college memory"
              loading="lazy">
       </div>
@@ -31435,22 +31721,46 @@ window.addEventListener('load', () => {
 </script>
 
 <!-- =========================================
-     THANK YOU SECTION
-     ORIGINAL UI + SIDE CIRCULAR PHOTO
+     THANK YOU — CINEMATIC PINNED SECTION
+     DESKTOP: PINNED SCROLL EXPERIENCE
+     MOBILE: RESPONSIVE NATURAL SCROLL
 ========================================= -->
 
-
 <section id="thankYouSection">
+
   <div class="ty-inner">
+
     <div class="ty-content">
-      <div class="ty-eyebrow"><span></span>A NOTE FROM AMAN<span></span></div>
-      <h2 class="ty-heading">Thank<span class="ty-dot" style="color:#734425"> You</span></h2>
-      <p class="ty-subheading">For being a part of my journey.</p>
-      <div class="ty-divider"><span></span><i></i><span></span></div>
+
+      <div class="ty-eyebrow">
+        <span></span>
+        A NOTE FROM AMAN
+        <span></span>
+      </div>
+
+      <h2 class="ty-heading">
+        Thank<span class="ty-dot"> You</span>
+      </h2>
+
+      <p class="ty-subheading">
+        For being a part of my journey.
+      </p>
+
+      <div class="ty-divider">
+        <span></span><i></i><span></span>
+      </div>
 
       <div class="ty-message">
-        <p>If you've made it this far, I just want to say <strong>thank you.</strong></p>
-        <p>Whether you're my friend, teacher, family member, or someone who simply stopped by — I truly appreciate you taking the time to explore my story.</p>
+        <p>
+          If you've made it this far, I just want to say
+          <strong>thank you.</strong>
+        </p>
+
+        <p>
+          Whether you're my friend, teacher, family member,
+          or someone who simply stopped by — I truly appreciate
+          you taking the time to explore my story.
+        </p>
       </div>
 
       <div class="ty-final">
@@ -31460,50 +31770,67 @@ window.addEventListener('load', () => {
 
       <div class="ty-signature">
         <span class="ty-sign-label">WITH GRATITUDE</span>
-        <h4>Aman Kumar</h4>
-        <p>BCA JOURNEY <span>·</span> 2023 — 2026</p>
+        <!-- <h4>Aman Kumar</h4>
+        <p>BCA JOURNEY <span>·</span> 2023 — 2026</p> -->
       </div>
 
       <button class="ty-back-top" id="tyBackTop" type="button">
         <span class="ty-btn-label">BACK TO THE BEGINNING</span>
         <span class="ty-arrow">↑</span>
       </button>
+
     </div>
 
     <div class="ty-photo-area">
+
       <div class="ty-photo-caption">A LITTLE MOMENT OF ME</div>
+
       <div class="ty-photo-stage">
+
         <div class="ty-orbit ty-orbit-one"></div>
         <div class="ty-orbit ty-orbit-two"></div>
         <div class="ty-orbit ty-orbit-three"></div>
+
         <div class="ty-photo-glow"></div>
 
         <div class="ty-photo-frame">
-          <img class="ty-personal-photo"
+          <img
+            class="ty-personal-photo"
             src="imgs/linkedinn-removebg-preview (1) copy.png"
-            alt="Aman Kumar" loading="eager">
+            alt="Aman Kumar"
+            loading="eager"
+          >
         </div>
 
         <span class="ty-photo-star ty-star-one">✦</span>
         <span class="ty-photo-star ty-star-two">✧</span>
         <span class="ty-photo-star ty-star-three">✦</span>
         <span class="ty-photo-star ty-star-four">✧</span>
+
       </div>
 
       <div class="ty-photo-name">
         <span>THE PERSON BEHIND THE JOURNEY</span>
         <h3>Aman Kumar</h3>
       </div>
+
     </div>
+
   </div>
 
   <div class="ty-bottom-note">
-    <span>MADE WITH MEMORIES</span>
+    <!-- <span>MADE WITH MEMORIES</span> -->
     <span>THANK YOU FOR VISITING</span>
   </div>
+
 </section>
 
+
 <style>
+/* =========================================
+   BASE
+========================================= */
+
 #thankYouSection {
   --ty-green:#344c39;
   --ty-dark:#253a2c;
@@ -31518,9 +31845,11 @@ window.addEventListener('load', () => {
   background:transparent;
   color:var(--ty-green);
   font-family:'Manrope',sans-serif;
+
   display:flex;
   flex-direction:column;
   justify-content:center;
+
   overflow:hidden;
   isolation:isolate;
 }
@@ -31533,6 +31862,7 @@ window.addEventListener('load', () => {
 #thankYouSection .ty-inner {
   width:min(1100px,100%);
   margin:auto;
+
   display:grid;
   grid-template-columns:minmax(0,1fr) 340px;
   align-items:center;
@@ -31544,10 +31874,16 @@ window.addEventListener('load', () => {
   position:relative;
 }
 
+
+/* =========================================
+   HEADING
+========================================= */
+
 #thankYouSection .ty-eyebrow {
   display:flex;
   align-items:center;
   gap:12px;
+
   color:var(--ty-gold);
   font-size:10px;
   font-weight:800;
@@ -31564,6 +31900,7 @@ window.addEventListener('load', () => {
 #thankYouSection .ty-heading {
   margin:0;
   color:var(--ty-green);
+
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(65px,7.5vw,100px);
   font-weight:700;
@@ -31572,7 +31909,9 @@ window.addEventListener('load', () => {
   perspective:1000px;
 }
 
-#thankYouSection .ty-dot { color:var(--ty-gold); }
+#thankYouSection .ty-dot {
+  color:var(--ty-gold);
+}
 
 #thankYouSection .ty-letter {
   display:inline-block;
@@ -31582,12 +31921,18 @@ window.addEventListener('load', () => {
 
 #thankYouSection .ty-subheading {
   margin:20px 0 0;
+
   font-family:'Cormorant Garamond',serif;
   font-size:25px;
   font-style:italic;
   font-weight:600;
   color:var(--ty-muted);
 }
+
+
+/* =========================================
+   DIVIDER
+========================================= */
 
 #thankYouSection .ty-divider {
   display:flex;
@@ -31610,7 +31955,14 @@ window.addEventListener('load', () => {
   transform:rotate(45deg);
 }
 
-#thankYouSection .ty-message { max-width:570px; }
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+#thankYouSection .ty-message {
+  max-width:570px;
+}
 
 #thankYouSection .ty-message p {
   margin:0 0 15px;
@@ -31625,11 +31977,19 @@ window.addEventListener('load', () => {
   font-weight:800;
 }
 
-#thankYouSection .ty-final { margin-top:28px; }
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+#thankYouSection .ty-final {
+  margin-top:28px;
+}
 
 #thankYouSection .ty-final h3 {
   margin:0;
   color:var(--ty-green);
+
   font-family:'Cormorant Garamond',serif;
   font-size:clamp(32px,4vw,45px);
   font-weight:700;
@@ -31649,7 +32009,14 @@ window.addEventListener('load', () => {
   background:var(--ty-gold);
 }
 
-#thankYouSection .ty-signature { margin-top:32px; }
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+#thankYouSection .ty-signature {
+  margin-top:32px;
+}
 
 #thankYouSection .ty-sign-label {
   display:block;
@@ -31662,6 +32029,7 @@ window.addEventListener('load', () => {
 
 #thankYouSection .ty-signature h4 {
   margin:0;
+
   font-family:'Cormorant Garamond',serif;
   font-size:32px;
   font-weight:700;
@@ -31676,9 +32044,14 @@ window.addEventListener('load', () => {
   letter-spacing:2px;
 }
 
-#thankYouSection .ty-signature p span { color:var(--ty-gold); }
+#thankYouSection .ty-signature p span {
+  color:var(--ty-gold);
+}
 
-/* BACK TO TOP */
+
+/* =========================================
+   BACK TO TOP BUTTON
+========================================= */
 
 #thankYouSection .ty-back-top {
   position:fixed !important;
@@ -31686,6 +32059,7 @@ window.addEventListener('load', () => {
   top:50vh !important;
   right:auto !important;
   bottom:auto !important;
+
   transform:translate(-50%,-50%) !important;
 
   width:230px;
@@ -31700,6 +32074,7 @@ window.addEventListener('load', () => {
 
   border:1px solid rgba(167,123,61,.65);
   border-radius:50px;
+
   background:#f8f4eb;
   color:#344c39;
 
@@ -31713,8 +32088,25 @@ window.addEventListener('load', () => {
   z-index:99999;
   isolation:isolate;
   overflow:hidden;
+
   -webkit-tap-highlight-color:transparent;
   touch-action:manipulation;
+
+  /* Hidden until section enters viewport */
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+
+  transition:
+    opacity .4s ease,
+    visibility .4s ease !important;
+}
+
+/* Observer-controlled visibility */
+#thankYouSection .ty-back-top.ty-visible {
+  opacity:1 !important;
+  visibility:visible !important;
+  pointer-events:auto !important;
 }
 
 #thankYouSection .ty-back-top::before {
@@ -31722,9 +32114,17 @@ window.addEventListener('load', () => {
   position:absolute;
   inset:0;
   z-index:-1;
-  background:linear-gradient(110deg,#986b4b,#734425 50%,#4f2c1b);
+
+  background:linear-gradient(
+    110deg,
+    #986b4b,
+    #734425 50%,
+    #4f2c1b
+  );
+
   transform:scaleX(0);
   transform-origin:left center;
+
   transition:transform .65s cubic-bezier(.16,1,.3,1);
 }
 
@@ -31760,15 +32160,22 @@ window.addEventListener('load', () => {
   display:inline-flex;
   align-items:center;
   justify-content:center;
+
   flex:0 0 31px;
   width:31px;
   height:31px;
+
   border:1px solid rgba(167,123,61,.6);
   border-radius:50%;
+
   color:var(--ty-gold);
   font-size:17px;
   line-height:1;
-  transition:background .35s ease,color .35s ease,transform .35s ease;
+
+  transition:
+    background .35s ease,
+    color .35s ease,
+    transform .35s ease;
 }
 
 #thankYouSection .ty-back-top:hover,
@@ -31786,20 +32193,26 @@ window.addEventListener('load', () => {
   transform:translateY(-3px);
 }
 
-/* PHOTO */
+
+/* =========================================
+   PHOTO AREA
+========================================= */
 
 #thankYouSection .ty-photo-area {
   position:relative;
+
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+
   perspective:1200px;
   transform-style:preserve-3d;
 }
 
 #thankYouSection .ty-photo-caption {
   margin-bottom:20px;
+
   color:var(--ty-gold);
   font-size:9px;
   font-weight:800;
@@ -31809,25 +32222,35 @@ window.addEventListener('load', () => {
 
 #thankYouSection .ty-photo-stage {
   position:relative;
+
   width:310px;
   height:310px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   transform-style:preserve-3d;
 }
 
 #thankYouSection .ty-photo-frame {
   position:relative;
   z-index:3;
+
   width:215px;
   height:215px;
   padding:7px;
+
   border:1px solid var(--ty-gold);
   border-radius:50%;
   overflow:hidden;
+
   background:var(--ty-cream);
-  box-shadow:0 18px 45px rgba(37,58,44,.15),0 0 0 8px rgba(167,123,61,.06);
+
+  box-shadow:
+    0 18px 45px rgba(37,58,44,.15),
+    0 0 0 8px rgba(167,123,61,.06);
+
   transform-style:preserve-3d;
 }
 
@@ -31835,16 +32258,25 @@ window.addEventListener('load', () => {
   display:block;
   width:100%;
   height:100%;
+
   border-radius:50%;
   object-fit:cover;
   object-position:center;
+
   filter:saturate(.75);
 }
 
+
+/* =========================================
+   ORBITS
+========================================= */
+
 #thankYouSection .ty-orbit {
   position:absolute;
+
   border:1px solid rgba(167,123,61,.55);
   border-radius:50%;
+
   pointer-events:none;
   transform-style:preserve-3d;
 }
@@ -31858,38 +32290,74 @@ window.addEventListener('load', () => {
 #thankYouSection .ty-orbit-two {
   width:250px;
   height:285px;
+
   border-color:rgba(52,76,57,.4);
+
   transform:rotateY(65deg) rotateZ(25deg);
 }
 
 #thankYouSection .ty-orbit-three {
   width:300px;
   height:300px;
+
   border-style:dashed;
   border-color:rgba(167,123,61,.25);
 }
 
 #thankYouSection .ty-photo-glow {
   position:absolute;
+
   width:220px;
   height:220px;
+
   border-radius:50%;
   background:rgba(185,149,85,.27);
+
   filter:blur(40px);
   z-index:0;
 }
 
+
+/* =========================================
+   PHOTO STARS
+========================================= */
+
 #thankYouSection .ty-photo-star {
   position:absolute;
   z-index:5;
+
   color:var(--ty-gold);
   line-height:1;
 }
 
-#thankYouSection .ty-star-one { top:12px;right:30px;font-size:21px; }
-#thankYouSection .ty-star-two { bottom:35px;left:5px;font-size:24px; }
-#thankYouSection .ty-star-three { top:70px;left:0;font-size:14px; }
-#thankYouSection .ty-star-four { bottom:70px;right:0;font-size:17px; }
+#thankYouSection .ty-star-one {
+  top:12px;
+  right:30px;
+  font-size:21px;
+}
+
+#thankYouSection .ty-star-two {
+  bottom:35px;
+  left:5px;
+  font-size:24px;
+}
+
+#thankYouSection .ty-star-three {
+  top:70px;
+  left:0;
+  font-size:14px;
+}
+
+#thankYouSection .ty-star-four {
+  bottom:70px;
+  right:0;
+  font-size:17px;
+}
+
+
+/* =========================================
+   PHOTO NAME
+========================================= */
 
 #thankYouSection .ty-photo-name {
   margin-top:22px;
@@ -31898,6 +32366,7 @@ window.addEventListener('load', () => {
 
 #thankYouSection .ty-photo-name span {
   display:block;
+
   color:var(--ty-muted);
   font-size:8px;
   font-weight:800;
@@ -31906,6 +32375,7 @@ window.addEventListener('load', () => {
 
 #thankYouSection .ty-photo-name h3 {
   margin:6px 0 0;
+
   color:var(--ty-green);
   font-family:'Cormorant Garamond',serif;
   font-size:32px;
@@ -31913,25 +32383,35 @@ window.addEventListener('load', () => {
   font-style:italic;
 }
 
-/* BOTTOM */
+
+/* =========================================
+   BOTTOM NOTE
+========================================= */
 
 #thankYouSection .ty-bottom-note {
   width:min(1100px,100%);
   margin:65px auto 0;
   padding-top:17px;
+
   border-top:1px solid rgba(167,123,61,.25);
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   color:var(--ty-muted);
   font-size:8px;
   font-weight:800;
   letter-spacing:2px;
 }
 
-/* TABLET */
+
+/* =========================================
+   TABLET
+========================================= */
 
 @media(max-width:900px) {
+
   #thankYouSection {
     padding-left:4%;
     padding-right:4%;
@@ -31968,14 +32448,20 @@ window.addEventListener('load', () => {
   }
 }
 
-/* MOBILE */
+
+/* =========================================
+   MOBILE
+========================================= */
 
 @media(max-width:680px) {
+
   #thankYouSection {
     min-height:100vh;
     min-height:100svh;
     height:auto;
+
     padding:65px 22px 24px;
+
     overflow:visible;
     display:block;
   }
@@ -32001,7 +32487,9 @@ window.addEventListener('load', () => {
     margin-bottom:18px;
   }
 
-  #thankYouSection .ty-eyebrow span { width:19px; }
+  #thankYouSection .ty-eyebrow span {
+    width:19px;
+  }
 
   #thankYouSection .ty-heading {
     font-size:clamp(58px,15vw,82px);
@@ -32104,13 +32592,21 @@ window.addEventListener('load', () => {
   }
 }
 
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
 @media(max-width:380px) {
+
   #thankYouSection {
     padding-left:16px;
     padding-right:16px;
   }
 
-  #thankYouSection .ty-inner { gap:32px; }
+  #thankYouSection .ty-inner {
+    gap:32px;
+  }
 
   #thankYouSection .ty-photo-stage {
     width:235px;
@@ -32129,16 +32625,67 @@ window.addEventListener('load', () => {
   }
 }
 
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
 @media(prefers-reduced-motion:reduce) {
+
   #thankYouSection .ty-back-top,
   #thankYouSection .ty-back-top::before,
   #thankYouSection .ty-arrow {
-    transition:none;
+    transition:none !important;
+  }
+}
+@media screen and (max-width: 680px) {
+
+  #thankYouSection .ty-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    overflow: visible !important;
+  }
+
+  #thankYouSection .ty-content .ty-heading {
+    display: block !important;
+    position: relative !important;
+
+    width: max-content !important;
+    max-width: none !important;
+
+    margin-left: calc(50% - 25px) !important;
+    margin-right: 0 !important;
+
+    transform: translateX(-50%) !important;
+
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(48px, 13vw, 70px) !important;
+    font-weight: 700 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -1.5px !important;
+
+    text-align: center !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow: visible !important;
+  }
+
+  #thankYouSection .ty-heading .ty-letter {
+    display: inline-block !important;
+    white-space: pre !important;
+  }
+
+  #thankYouSection .ty-heading .ty-dot {
+    display: inline !important;
+    white-space: nowrap !important;
   }
 }
 </style>
 
+
 <script>
+  
 (() => {
   "use strict";
 
@@ -32155,32 +32702,39 @@ window.addEventListener('load', () => {
       return;
     }
 
-    section.dataset.tyReady = "true";
     gs.registerPlugin(ST);
 
-    const eyebrow = section.querySelector(".ty-eyebrow");
-    const heading = section.querySelector(".ty-heading");
-    const subheading = section.querySelector(".ty-subheading");
-    const divider = section.querySelector(".ty-divider");
-    const dividerIcon = section.querySelector(".ty-divider i");
-    const messages = section.querySelectorAll(".ty-message p");
-    const finalBlock = section.querySelector(".ty-final");
-    const finalHeading = section.querySelector(".ty-final h3");
-    const finalLine = section.querySelector(".ty-final-line");
-    const signature = section.querySelector(".ty-signature");
-    const backTop = section.querySelector(".ty-back-top");
-    const bottomNote = section.querySelector(".ty-bottom-note");
+    const $ = selector => section.querySelector(selector);
+    const $$ = selector => [...section.querySelectorAll(selector)];
 
-    const photoArea = section.querySelector(".ty-photo-area");
-    const photoCaption = section.querySelector(".ty-photo-caption");
-    const photoStage = section.querySelector(".ty-photo-stage");
-    const photoFrame = section.querySelector(".ty-photo-frame");
-    const photo = section.querySelector(".ty-personal-photo");
-    const orbits = section.querySelectorAll(".ty-orbit");
-    const stars = section.querySelectorAll(".ty-photo-star");
-    const photoName = section.querySelector(".ty-photo-name");
+    const eyebrow = $(".ty-eyebrow");
+    const heading = $(".ty-heading");
+    const subheading = $(".ty-subheading");
+    const divider = $(".ty-divider");
+    const dividerIcon = $(".ty-divider i");
 
-    /* SPLIT LETTERS */
+    const messages = $$(".ty-message p");
+
+    const finalBlock = $(".ty-final");
+    const finalHeading = $(".ty-final h3");
+    const finalLine = $(".ty-final-line");
+    const signature = $(".ty-signature");
+    const bottomNote = $(".ty-bottom-note");
+
+    const photoArea = $(".ty-photo-area");
+    const photoCaption = $(".ty-photo-caption");
+    const photoStage = $(".ty-photo-stage");
+    const photoFrame = $(".ty-photo-frame");
+    const photo = $(".ty-personal-photo");
+    const orbits = $$(".ty-orbit");
+    const stars = $$(".ty-photo-star");
+    const photoName = $(".ty-photo-name");
+
+    const backTop = $(".ty-back-top");
+
+    /* =====================================
+       SPLIT TEXT - PRESERVE HTML FORMATTING
+    ===================================== */
 
     function splitLetters(element) {
       if (!element) return [];
@@ -32192,20 +32746,26 @@ window.addEventListener('load', () => {
       );
 
       const nodes = [];
-      while (walker.nextNode()) nodes.push(walker.currentNode);
+
+      while (walker.nextNode()) {
+        nodes.push(walker.currentNode);
+      }
 
       const letters = [];
 
       nodes.forEach(node => {
         const value = node.nodeValue;
+
         if (!value.trim()) return;
 
         const fragment = document.createDocumentFragment();
 
         [...value].forEach(char => {
           const span = document.createElement("span");
+
           span.className = "ty-letter";
           span.textContent = char === " " ? "\u00A0" : char;
+
           fragment.appendChild(span);
           letters.push(span);
         });
@@ -32219,586 +32779,402 @@ window.addEventListener('load', () => {
     const headingLetters = splitLetters(heading);
     const finalLetters = splitLetters(finalHeading);
 
-    /* BUTTON ANIMATION */
+    /* =====================================
+       INITIAL STATES
+    ===================================== */
 
-    let buttonLetters = [];
-    let buttonArrow = null;
-    let buttonTimeline = null;
-    let buttonHovering = false;
+    gs.set([eyebrow, subheading, divider], {
+      autoAlpha: 0,
+      y: 20
+    });
 
-    if (backTop) {
-      const label = backTop.querySelector(".ty-btn-label");
-      buttonArrow = backTop.querySelector(".ty-arrow");
+    gs.set(headingLetters, {
+      autoAlpha: 0,
+      y: 32,
+      rotationX: -55,
+      scale: 0.88,
+      transformOrigin: "50% 100%"
+    });
 
-      const content = document.createElement("span");
-      content.className = "ty-btn-content";
+    gs.set(messages, {
+      autoAlpha: 0,
+      y: 22
+    });
 
-      if (label) {
-        content.appendChild(label);
+    gs.set(finalBlock, {
+      autoAlpha: 0,
+      y: 24
+    });
+
+    gs.set(finalLetters, {
+      autoAlpha: 0,
+      y: 24,
+      rotationX: -35,
+      scale: 0.92,
+      transformOrigin: "50% 100%"
+    });
+
+    gs.set(finalLine, {
+      width: "0%"
+    });
+
+    gs.set(signature, {
+      autoAlpha: 0,
+      y: 20
+    });
+
+    gs.set(bottomNote, {
+      autoAlpha: 0,
+      y: 16
+    });
+
+    gs.set(photoArea, {
+      autoAlpha: 0,
+      y: 28
+    });
+
+    gs.set(photoStage, {
+      rotationY: -15,
+      rotationX: 7,
+      scale: 0.92,
+      transformPerspective: 1000
+    });
+
+    gs.set(photoFrame, {
+      rotationZ: -5,
+      scale: 0.94
+    });
+
+    gs.set(photo, {
+      scale: 1.12,
+      filter: "saturate(.65)"
+    });
+
+    gs.set(orbits, {
+      autoAlpha: 0,
+      scale: 0.85,
+      rotation: -15
+    });
+
+    gs.set(stars, {
+      autoAlpha: 0,
+      scale: 0.6,
+      rotation: 35
+    });
+
+    gs.set([photoCaption, photoName], {
+      autoAlpha: 0,
+      y: 16
+    });
+
+    /* =====================================
+       MAIN SCROLL REVEAL
+       NO PIN - QUICK NATURAL SCRUB
+    ===================================== */
+
+    const tl = gs.timeline({
+      defaults: {
+        ease: "none"
+      },
+
+      scrollTrigger: {
+        trigger: section,
+        start: "top 82%",
+
+        // Natural scroll distance, not an excessively long animation
+        end: () => {
+          return "+=" + Math.max(
+            window.innerHeight * 1.05,
+            section.scrollHeight * 0.85
+          );
+        },
+
+        scrub: 0.35,
+        pin: false,
+        invalidateOnRefresh: true,
+        anticipatePin: 0
       }
+    });
 
-      if (buttonArrow) {
-        content.appendChild(buttonArrow);
-      }
+    /* EYEBROW */
 
-      backTop.innerHTML = "";
-      backTop.appendChild(content);
+    tl.to(eyebrow, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.45
+    }, 0);
 
-      const buttonLabel = content.querySelector(".ty-btn-label");
+    /* THANK YOU HEADING */
 
-      if (buttonLabel) {
-        const walker = document.createTreeWalker(
-          buttonLabel,
-          NodeFilter.SHOW_TEXT,
-          null
-        );
+    tl.to(headingLetters, {
+      autoAlpha: 1,
+      y: 0,
+      rotationX: 0,
+      scale: 1,
+      stagger: 0.045,
+      duration: 1.15,
+      ease: "power2.out"
+    }, 0.2);
 
-        const textNodes = [];
-        while (walker.nextNode()) textNodes.push(walker.currentNode);
+    /* SUBHEADING */
 
-        textNodes.forEach(node => {
-          const fragment = document.createDocumentFragment();
+    tl.to(subheading, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5
+    }, 0.85);
 
-          [...node.nodeValue].forEach(char => {
-            const span = document.createElement("span");
-            span.className = "ty-btn-letter";
-            span.textContent = char === " " ? "\u00A0" : char;
-            fragment.appendChild(span);
-            buttonLetters.push(span);
-          });
+    /* DIVIDER */
 
-          node.parentNode.replaceChild(fragment, node);
-        });
-      }
+    tl.to(divider, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.45
+    }, 1.05);
 
-      gs.set(buttonLetters, {
-        transformPerspective:600,
-        transformOrigin:"50% 50% -8px"
-      });
-
-      function killButtonAnimation() {
-        if (buttonTimeline) {
-          buttonTimeline.kill();
-          buttonTimeline = null;
-        }
-
-        gs.killTweensOf(buttonLetters);
-
-        if (buttonArrow) {
-          gs.killTweensOf(buttonArrow);
-        }
-      }
-
-      function enterButton() {
-        if (buttonHovering) return;
-        buttonHovering = true;
-
-        backTop.classList.add("is-hovered");
-        killButtonAnimation();
-
-        gs.set(buttonLetters, {
-          x:-18,
-          y:0,
-          rotationX:-85,
-          rotationY:35,
-          scale:.88,
-          autoAlpha:0
-        });
-
-        if (buttonArrow) {
-          gs.set(buttonArrow, {
-            x:-12,
-            scale:.7,
-            autoAlpha:0
-          });
-        }
-
-        buttonTimeline = gs.timeline();
-
-        buttonTimeline.to(buttonLetters, {
-          x:0,
-          y:0,
-          rotationX:0,
-          rotationY:0,
-          scale:1,
-          autoAlpha:1,
-          duration:.38,
-          stagger:{each:.035,from:"start"},
-          ease:"power3.out"
-        },0);
-
-        if (buttonArrow) {
-          buttonTimeline.to(buttonArrow, {
-            x:0,
-            scale:1,
-            autoAlpha:1,
-            duration:.32,
-            ease:"power3.out"
-          },.18);
-        }
-      }
-
-      function leaveButton() {
-        if (!buttonHovering) return;
-        buttonHovering = false;
-
-        backTop.classList.remove("is-hovered");
-        killButtonAnimation();
-
-        buttonTimeline = gs.timeline({
-          onComplete:() => {
-            buttonTimeline = null;
-          }
-        });
-
-        buttonTimeline.to(buttonLetters, {
-          x:15,
-          y:-4,
-          rotationX:75,
-          rotationY:-30,
-          scale:.85,
-          autoAlpha:0,
-          duration:.23,
-          stagger:{each:.018,from:"end"},
-          ease:"power3.in"
-        },0);
-
-        if (buttonArrow) {
-          buttonTimeline.to(buttonArrow, {
-            x:12,
-            scale:.7,
-            autoAlpha:0,
-            duration:.2,
-            ease:"power2.in"
-          },0);
-        }
-
-        buttonTimeline.add(() => {
-          if (buttonHovering) return;
-
-          gs.set(buttonLetters, {
-            x:0,
-            y:0,
-            rotationX:0,
-            rotationY:0,
-            scale:.65,
-            autoAlpha:0
-          });
-
-          if (buttonArrow) {
-            gs.set(buttonArrow, {
-              x:0,
-              scale:.65,
-              autoAlpha:0
-            });
-          }
-
-          const reveal = gs.timeline();
-
-          reveal.to(buttonLetters, {
-            x:0,
-            y:0,
-            rotationX:0,
-            rotationY:0,
-            scale:1,
-            autoAlpha:1,
-            duration:.32,
-            stagger:{each:.012,from:"center"},
-            ease:"back.out(1.5)"
-          },0);
-
-          if (buttonArrow) {
-            reveal.to(buttonArrow, {
-              x:0,
-              scale:1,
-              autoAlpha:1,
-              duration:.32,
-              ease:"back.out(1.5)"
-            },0);
-          }
-        });
-      }
-
-      backTop.addEventListener("pointerenter", enterButton);
-      backTop.addEventListener("pointerleave", leaveButton);
-
-      /* Initial text remains visible */
-      gs.set(buttonLetters,{autoAlpha:1,x:0,y:0,rotationX:0,rotationY:0,scale:1});
-      if (buttonArrow) gs.set(buttonArrow,{autoAlpha:1,x:0,scale:1});
-
-      backTop.addEventListener("click",() => {
-        window.scrollTo({top:0,behavior:"smooth"});
-      });
+    if (dividerIcon) {
+      tl.fromTo(dividerIcon,
+        {
+          rotation: -90,
+          scale: 0.7
+        },
+        {
+          rotation: 0,
+          scale: 1,
+          duration: 0.55,
+          ease: "power2.out"
+        },
+        1.05
+      );
     }
 
-    /* INITIAL STATES */
+    /* PHOTO REVEAL */
 
-    gs.set([eyebrow,subheading,divider],{
-      autoAlpha:0,
-      y:25
-    });
+    tl.to(photoArea, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.75
+    }, 1.2);
 
-    gs.set(headingLetters,{
-      autoAlpha:0,
-      y:55,
-      rotationX:-85,
-      rotationY:35,
-      rotationZ:-8,
-      scale:.7,
-      transformOrigin:"50% 50% -35px"
-    });
+    tl.to(photoStage, {
+      rotationY: 0,
+      rotationX: 0,
+      scale: 1,
+      duration: 0.95,
+      ease: "power2.out"
+    }, 1.25);
 
-    gs.set(messages,{
-      autoAlpha:0,
-      y:30,
-      filter:"blur(5px)"
-    });
+    tl.to(photoFrame, {
+      rotationZ: 0,
+      scale: 1,
+      duration: 0.75,
+      ease: "power2.out"
+    }, 1.45);
 
-    gs.set(finalBlock,{
-      autoAlpha:0,
-      y:30
-    });
+    tl.to(photo, {
+      scale: 1,
+      filter: "saturate(1)",
+      duration: 0.85
+    }, 1.5);
 
-    gs.set(finalLetters,{
-      autoAlpha:0,
-      y:40,
-      rotationX:-75,
-      scale:.75
-    });
+    /* ORBITS */
 
-    gs.set(finalLine,{width:0});
+    tl.to(orbits, {
+      autoAlpha: 1,
+      scale: 1,
+      rotation: 0,
+      stagger: 0.08,
+      duration: 0.8,
+      ease: "power2.out"
+    }, 1.65);
 
-    if (signature) gs.set(signature,{autoAlpha:0,y:20});
+    /* PHOTO STARS */
+
+    tl.to(stars, {
+      autoAlpha: 1,
+      scale: 1,
+      rotation: 0,
+      stagger: 0.07,
+      duration: 0.5,
+      ease: "back.out(1.5)"
+    }, 2);
+
+    /* PHOTO CAPTION + NAME */
+
+    tl.to(photoCaption, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.45
+    }, 1.9);
+
+    tl.to(photoName, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5
+    }, 2.2);
+
+    /* MESSAGE PARAGRAPHS */
+
+    tl.to(messages, {
+      autoAlpha: 1,
+      y: 0,
+      stagger: 0.22,
+      duration: 0.65,
+      ease: "power2.out"
+    }, 2.35);
+
+    /* FINAL MESSAGE */
+
+    tl.to(finalBlock, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.55
+    }, 3.25);
+
+    tl.to(finalLetters, {
+      autoAlpha: 1,
+      y: 0,
+      rotationX: 0,
+      scale: 1,
+      stagger: 0.035,
+      duration: 0.85,
+      ease: "power2.out"
+    }, 3.35);
+
+    /* GOLDEN LINE */
+
+    tl.to(finalLine, {
+      width: "100%",
+      duration: 0.65,
+      ease: "power2.inOut"
+    }, 4);
+
+    /* SIGNATURE */
+
+    tl.to(signature, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.55
+    }, 4.45);
+
+    /* BOTTOM NOTE */
+
+    tl.to(bottomNote, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5
+    }, 4.8);
+
+    /* =====================================
+       BACK TO TOP BUTTON
+       INDEPENDENT FROM GSAP TIMELINE
+    ===================================== */
 
     if (backTop) {
-      gs.set(backTop,{
-        autoAlpha:0,
-        scale:.9,
-        xPercent:-50,
-        yPercent:-50,
-        x:0,
-        y:25
+      // Never let the main timeline hide this button
+      gs.set(backTop, {
+        clearProps: "opacity,visibility,scale,x,y"
       });
+
+      backTop.style.opacity = "0";
+      backTop.style.visibility = "hidden";
+      backTop.style.pointerEvents = "none";
+      backTop.style.transition =
+        "opacity .35s ease, visibility .35s ease";
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const visible = entry.isIntersecting;
+
+          backTop.style.opacity = visible ? "1" : "0";
+          backTop.style.visibility = visible ? "visible" : "hidden";
+          backTop.style.pointerEvents = visible ? "auto" : "none";
+        });
+      }, {
+        threshold: 0,
+        rootMargin: "0px"
+      });
+
+      observer.observe(section);
+
+      // Back-to-top click
+      if (!backTop.dataset.tyClickReady) {
+        backTop.dataset.tyClickReady = "true";
+
+        backTop.addEventListener("click", event => {
+          event.preventDefault();
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      }
     }
 
-    gs.set(bottomNote,{autoAlpha:0,y:22});
-    gs.set(photoArea,{autoAlpha:0,y:55});
+    /* =====================================
+       PHOTO FLOAT - DECORATIVE ONLY
+    ===================================== */
 
-    gs.set(photoStage,{
-      rotationY:-32,
-      rotationX:14,
-      rotationZ:-7,
-      scale:.72,
-      transformPerspective:1200
+    // Small gentle float, independent of scroll reveal
+    gs.to(photoStage, {
+      y: -5,
+      duration: 2.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
     });
 
-    gs.set(photoFrame,{rotationZ:-12,scale:.82});
-
-    gs.set(photo,{
-      scale:1.35,
-      filter:"saturate(.2) brightness(.85)"
-    });
-
-    gs.set(orbits,{
-      autoAlpha:0,
-      scale:.45,
-      rotation:-40
-    });
-
-    gs.set(stars,{
-      autoAlpha:0,
-      scale:0,
-      rotation:90
-    });
-
-    gs.set([photoCaption,photoName],{
-      autoAlpha:0,
-      y:18
-    });
-
-    /* RESPONSIVE SCROLL ANIMATION */
-
-    const responsive = gs.matchMedia();
-
-    responsive.add({
-      desktop:"(min-width: 681px)",
-      mobile:"(max-width: 680px)"
-    }, context => {
-      const isMobile = context.conditions.mobile;
-
-      const tl = gs.timeline({
-        defaults:{ease:"none"},
-        scrollTrigger:{
-          trigger:section,
-          start:isMobile ? "top 75%" : "top top",
-
-          /* Desktop keeps the original pinned cinematic scroll.
-             Mobile uses natural scrolling to prevent clipping. */
-
-          end:isMobile ? "bottom 20%" : () => "+=" + Math.max(window.innerHeight * 9,6500),
-
-          scrub:isMobile ? 1.1 : 1.8,
-          pin:!isMobile,
-          pinSpacing:!isMobile,
-          anticipatePin:1,
-          invalidateOnRefresh:true,
-          refreshPriority:1
-        }
-      });
-
-      /* EYEBROW */
-
-      tl.to(eyebrow,{
-        autoAlpha:1,
-        y:0,
-        duration:1
-      },0);
-
-      /* HEADING */
-
-      tl.to(headingLetters,{
-        autoAlpha:1,
-        y:0,
-        rotationX:0,
-        rotationY:0,
-        rotationZ:0,
-        scale:1,
-        duration:2,
-        stagger:.045,
-        ease:"power3.out"
-      },.3);
-
-      tl.to(subheading,{
-        autoAlpha:1,
-        y:0,
-        duration:1.2,
-        ease:"power3.out"
-      },1.5);
-
-      tl.to(divider,{
-        autoAlpha:1,
-        y:0,
-        duration:1
-      },2);
-
-      if (dividerIcon) {
-        tl.to(dividerIcon,{
-          rotation:360,
-          scale:1,
-          duration:1.5,
-          ease:"power2.out"
-        },2);
-      }
-
-      /* PHOTO REVEAL */
-
-      tl.to(photoArea,{
-        autoAlpha:1,
-        y:0,
-        duration:1.5,
-        ease:"power3.out"
-      },2.3);
-
-      tl.to(photoStage,{
-        rotationY:0,
-        rotationX:0,
-        rotationZ:0,
-        scale:1,
-        duration:2.5,
-        ease:"power3.out"
-      },2.4);
-
-      tl.to(photoFrame,{
-        rotationZ:0,
-        scale:1,
-        duration:2,
-        ease:"back.out(1.5)"
-      },3);
-
-      tl.to(photo,{
-        scale:1,
-        filter:"saturate(1) brightness(1)",
-        duration:2.2,
-        ease:"power2.out"
-      },3.2);
-
-      tl.to(orbits,{
-        autoAlpha:1,
-        scale:1,
-        rotation:0,
-        duration:2.2,
-        stagger:.2,
-        ease:"power3.out"
-      },3.3);
-
-      tl.to(stars,{
-        autoAlpha:1,
-        scale:1,
-        rotation:0,
-        duration:1.2,
-        stagger:.18,
-        ease:"back.out(2)"
-      },4);
-
-      tl.to(photoCaption,{
-        autoAlpha:1,
-        y:0,
-        duration:1
-      },4);
-
-      tl.to(photoName,{
-        autoAlpha:1,
-        y:0,
-        duration:1.2,
-        ease:"power2.out"
-      },4.4);
-
-      /* MESSAGE */
-
-      tl.to(messages,{
-        autoAlpha:1,
-        y:0,
-        filter:"blur(0px)",
-        duration:1.5,
-        stagger:.75,
-        ease:"power2.out"
-      },4.5);
-
-      /* FINAL MESSAGE */
-
-      tl.to(finalBlock,{
-        autoAlpha:1,
-        y:0,
-        duration:1.2,
-        ease:"power3.out"
-      },7.3);
-
-      tl.to(finalLetters,{
-        autoAlpha:1,
-        y:0,
-        rotationX:0,
-        scale:1,
-        duration:1.5,
-        stagger:.045,
-        ease:"back.out(1.5)"
-      },7.5);
-
-      tl.to(finalLine,{
-        width:"100%",
-        duration:1.5,
-        ease:"power2.inOut"
-      },8.3);
-
-      /* BOTTOM NOTE */
-
-      tl.to(bottomNote,{
-        autoAlpha:1,
-        y:0,
-        duration:1.2
-      },10.2);
-
-      /* PHOTO FLOAT */
-
-      tl.to(photoStage,{
-        y:-9,
-        rotationY:4,
-        duration:2,
-        ease:"sine.inOut"
-      },10.5);
-
-      tl.to(photoStage,{
-        y:0,
-        rotationY:0,
-        duration:2,
-        ease:"sine.inOut"
-      },12.5);
-
-      /* HOLD */
-
-      tl.to({}, {duration:2},14.5);
-
-      /* CINEMATIC EXIT */
-
-      tl.to([
-        eyebrow,
-        heading,
-        subheading,
-        divider,
-        messages,
-        finalBlock,
-        photoArea
-      ],{
-        autoAlpha:0,
-        y:-40,
-        scale:.97,
-        duration:2,
-        ease:"power2.in"
-      },16.5);
-
-      if (signature) {
-        tl.set(signature,{
-          autoAlpha:0,
-          y:20
-        },18.5);
-      }
-
-      tl.to(bottomNote,{
-        autoAlpha:0,
-        y:-15,
-        duration:1.2
-      },17);
-
-      /* CENTER BUTTON */
-
-      if (backTop) {
-        tl.to(backTop,{
-          autoAlpha:1,
-          scale:1,
-          xPercent:-50,
-          yPercent:-50,
-          x:0,
-          y:0,
-          duration:1.4,
-          ease:"power3.out"
-        },18.5);
-      }
-
-      return () => {
-        tl.scrollTrigger && tl.scrollTrigger.kill();
-        tl.kill();
-      };
-    });
-
-    /* IMAGE CHECK */
+    /* =====================================
+       IMAGE LOAD + REFRESH
+    ===================================== */
 
     if (photo) {
-      photo.addEventListener("error",() => {
+      photo.addEventListener("error", () => {
         console.warn(
-          "Thank You photo not found. Check image path:",
+          "Thank You photo not found:",
           photo.getAttribute("src")
         );
       });
+
+      if (!photo.complete) {
+        photo.addEventListener("load", () => {
+          ST.refresh();
+        }, { once: true });
+      }
     }
 
-    /* REFRESH AFTER LAYOUT / DEVICE CHANGE */
+    /* =====================================
+       REFRESH ON RESIZE
+    ===================================== */
 
-    let refreshFrame = 0;
+    let refreshFrame;
 
-    const refreshOnResize = () => {
+    function refreshSection() {
       cancelAnimationFrame(refreshFrame);
+
       refreshFrame = requestAnimationFrame(() => {
         ST.refresh();
       });
-    };
-
-    window.addEventListener("resize",refreshOnResize,{passive:true});
-    window.addEventListener("orientationchange",refreshOnResize,{passive:true});
-
-    if (window.visualViewport) {
-      window.visualViewport.addEventListener("resize",refreshOnResize,{passive:true});
     }
 
-    window.addEventListener("load",refreshOnResize,{once:true});
+    window.addEventListener("resize", refreshSection, {
+      passive: true
+    });
+
+    window.addEventListener("orientationchange", refreshSection, {
+      passive: true
+    });
+
+    if (window.visualViewport) {
+      window.visualViewport.addEventListener(
+        "resize",
+        refreshSection,
+        { passive: true }
+      );
+    }
+
+    section.dataset.tyReady = "true";
 
     requestAnimationFrame(() => {
       ST.refresh();
@@ -32806,13 +33182,17 @@ window.addEventListener('load', () => {
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded",initThankYouSection);
+    document.addEventListener(
+      "DOMContentLoaded",
+      initThankYouSection
+    );
   } else {
     initThankYouSection();
   }
 })();
-</script>
 
+  
+</script>
 
 
 <section id="gaonConnect">
